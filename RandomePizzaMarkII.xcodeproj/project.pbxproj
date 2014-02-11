@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC2C067A189AD30F0052B043 /* Mushroom_Sketch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC2C0678189AD30F0052B043 /* Mushroom_Sketch.jpg */; };
+		EC2C067B189AD30F0052B043 /* pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = EC2C0679189AD30F0052B043 /* pizza.png */; };
+		EC2C067E189AD6790052B043 /* RandomPizzaGeneratortGeneratorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2C067D189AD6790052B043 /* RandomPizzaGeneratortGeneratorBrain.m */; };
+		EC2C0681189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2C0680189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.m */; };
+		EC2C0687189ADC980052B043 /* Topping.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2C0686189ADC980052B043 /* Topping.m */; };
+		EC83F24F1896DFE900626A9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F24E1896DFE900626A9B /* Foundation.framework */; };
+		EC83F2511896DFE900626A9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F2501896DFE900626A9B /* CoreGraphics.framework */; };
+		EC83F2531896DFE900626A9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F2521896DFE900626A9B /* UIKit.framework */; };
+		EC83F2591896DFE900626A9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC83F2571896DFE900626A9B /* InfoPlist.strings */; };
+		EC83F25B1896DFE900626A9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC83F25A1896DFE900626A9B /* main.m */; };
+		EC83F25F1896DFE900626A9B /* RandomPizzaGeneratorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC83F25E1896DFE900626A9B /* RandomPizzaGeneratorAppDelegate.m */; };
+		EC83F2621896DFE900626A9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC83F2601896DFE900626A9B /* Main.storyboard */; };
+		EC83F2651896DFE900626A9B /* RandomPizzaGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC83F2641896DFE900626A9B /* RandomPizzaGeneratorViewController.m */; };
+		EC83F2671896DFE900626A9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC83F2661896DFE900626A9B /* Images.xcassets */; };
+		EC83F26E1896DFE900626A9B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F26D1896DFE900626A9B /* XCTest.framework */; };
+		EC83F26F1896DFE900626A9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F24E1896DFE900626A9B /* Foundation.framework */; };
+		EC83F2701896DFE900626A9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F2521896DFE900626A9B /* UIKit.framework */; };
+		EC83F2781896DFE900626A9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC83F2761896DFE900626A9B /* InfoPlist.strings */; };
+		EC83F27A1896DFE900626A9B /* RandomePizzaMarkIITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC83F2791896DFE900626A9B /* RandomePizzaMarkIITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC83F2711896DFE900626A9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC83F2431896DFE800626A9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC83F24A1896DFE800626A9B;
+			remoteInfo = RandomePizzaMarkII;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC2C0678189AD30F0052B043 /* Mushroom_Sketch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mushroom_Sketch.jpg; sourceTree = "<group>"; };
+		EC2C0679189AD30F0052B043 /* pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza.png; sourceTree = "<group>"; };
+		EC2C067C189AD6790052B043 /* RandomPizzaGeneratortGeneratorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomPizzaGeneratortGeneratorBrain.h; sourceTree = "<group>"; };
+		EC2C067D189AD6790052B043 /* RandomPizzaGeneratortGeneratorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomPizzaGeneratortGeneratorBrain.m; sourceTree = "<group>"; };
+		EC2C067F189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomPizzaGeneratorToppingViewController.h; sourceTree = "<group>"; };
+		EC2C0680189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomPizzaGeneratorToppingViewController.m; sourceTree = "<group>"; };
+		EC2C0685189ADC980052B043 /* Topping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Topping.h; sourceTree = "<group>"; };
+		EC2C0686189ADC980052B043 /* Topping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Topping.m; sourceTree = "<group>"; };
+		EC83F24B1896DFE800626A9B /* RandomePizzaMarkII.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomePizzaMarkII.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC83F24E1896DFE900626A9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EC83F2501896DFE900626A9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EC83F2521896DFE900626A9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EC83F2561896DFE900626A9B /* RandomePizzaMarkII-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RandomePizzaMarkII-Info.plist"; sourceTree = "<group>"; };
+		EC83F2581896DFE900626A9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC83F25A1896DFE900626A9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC83F25C1896DFE900626A9B /* RandomePizzaMarkII-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RandomePizzaMarkII-Prefix.pch"; sourceTree = "<group>"; };
+		EC83F25D1896DFE900626A9B /* RandomPizzaGeneratorAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomPizzaGeneratorAppDelegate.h; sourceTree = "<group>"; };
+		EC83F25E1896DFE900626A9B /* RandomPizzaGeneratorAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomPizzaGeneratorAppDelegate.m; sourceTree = "<group>"; };
+		EC83F2611896DFE900626A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC83F2631896DFE900626A9B /* RandomPizzaGeneratorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomPizzaGeneratorViewController.h; sourceTree = "<group>"; };
+		EC83F2641896DFE900626A9B /* RandomPizzaGeneratorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomPizzaGeneratorViewController.m; sourceTree = "<group>"; };
+		EC83F2661896DFE900626A9B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EC83F26C1896DFE900626A9B /* RandomePizzaMarkIITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomePizzaMarkIITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC83F26D1896DFE900626A9B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EC83F2751896DFE900626A9B /* RandomePizzaMarkIITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RandomePizzaMarkIITests-Info.plist"; sourceTree = "<group>"; };
+		EC83F2771896DFE900626A9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC83F2791896DFE900626A9B /* RandomePizzaMarkIITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomePizzaMarkIITests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC83F2481896DFE800626A9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC83F2511896DFE900626A9B /* CoreGraphics.framework in Frameworks */,
+				EC83F2531896DFE900626A9B /* UIKit.framework in Frameworks */,
+				EC83F24F1896DFE900626A9B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC83F2691896DFE900626A9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC83F26E1896DFE900626A9B /* XCTest.framework in Frameworks */,
+				EC83F2701896DFE900626A9B /* UIKit.framework in Frameworks */,
+				EC83F26F1896DFE900626A9B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC2C0677189AD30F0052B043 /* Pizza Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C0678189AD30F0052B043 /* Mushroom_Sketch.jpg */,
+				EC2C0679189AD30F0052B043 /* pizza.png */,
+			);
+			path = "Pizza Graphics";
+			sourceTree = "<group>";
+		};
+		EC83F2421896DFE800626A9B = {
+			isa = PBXGroup;
+			children = (
+				EC83F2541896DFE900626A9B /* RandomePizzaMarkII */,
+				EC83F2731896DFE900626A9B /* RandomePizzaMarkIITests */,
+				EC83F24D1896DFE800626A9B /* Frameworks */,
+				EC83F24C1896DFE800626A9B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC83F24C1896DFE800626A9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC83F24B1896DFE800626A9B /* RandomePizzaMarkII.app */,
+				EC83F26C1896DFE900626A9B /* RandomePizzaMarkIITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC83F24D1896DFE800626A9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC83F24E1896DFE900626A9B /* Foundation.framework */,
+				EC83F2501896DFE900626A9B /* CoreGraphics.framework */,
+				EC83F2521896DFE900626A9B /* UIKit.framework */,
+				EC83F26D1896DFE900626A9B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC83F2541896DFE900626A9B /* RandomePizzaMarkII */ = {
+			isa = PBXGroup;
+			children = (
+				EC83F2601896DFE900626A9B /* Main.storyboard */,
+				EC2C0685189ADC980052B043 /* Topping.h */,
+				EC2C0686189ADC980052B043 /* Topping.m */,
+				EC83F2631896DFE900626A9B /* RandomPizzaGeneratorViewController.h */,
+				EC83F2641896DFE900626A9B /* RandomPizzaGeneratorViewController.m */,
+				EC2C067F189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.h */,
+				EC2C0680189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.m */,
+				EC2C067C189AD6790052B043 /* RandomPizzaGeneratortGeneratorBrain.h */,
+				EC2C067D189AD6790052B043 /* RandomPizzaGeneratortGeneratorBrain.m */,
+				EC2C0677189AD30F0052B043 /* Pizza Graphics */,
+				EC83F2661896DFE900626A9B /* Images.xcassets */,
+				EC83F2551896DFE900626A9B /* Supporting Files */,
+			);
+			path = RandomePizzaMarkII;
+			sourceTree = "<group>";
+		};
+		EC83F2551896DFE900626A9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC83F25D1896DFE900626A9B /* RandomPizzaGeneratorAppDelegate.h */,
+				EC83F25E1896DFE900626A9B /* RandomPizzaGeneratorAppDelegate.m */,
+				EC83F2561896DFE900626A9B /* RandomePizzaMarkII-Info.plist */,
+				EC83F2571896DFE900626A9B /* InfoPlist.strings */,
+				EC83F25A1896DFE900626A9B /* main.m */,
+				EC83F25C1896DFE900626A9B /* RandomePizzaMarkII-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC83F2731896DFE900626A9B /* RandomePizzaMarkIITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC83F2791896DFE900626A9B /* RandomePizzaMarkIITests.m */,
+				EC83F2741896DFE900626A9B /* Supporting Files */,
+			);
+			path = RandomePizzaMarkIITests;
+			sourceTree = "<group>";
+		};
+		EC83F2741896DFE900626A9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC83F2751896DFE900626A9B /* RandomePizzaMarkIITests-Info.plist */,
+				EC83F2761896DFE900626A9B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC83F24A1896DFE800626A9B /* RandomePizzaMarkII */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC83F27D1896DFE900626A9B /* Build configuration list for PBXNativeTarget "RandomePizzaMarkII" */;
+			buildPhases = (
+				EC83F2471896DFE800626A9B /* Sources */,
+				EC83F2481896DFE800626A9B /* Frameworks */,
+				EC83F2491896DFE800626A9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RandomePizzaMarkII;
+			productName = RandomePizzaMarkII;
+			productReference = EC83F24B1896DFE800626A9B /* RandomePizzaMarkII.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC83F26B1896DFE900626A9B /* RandomePizzaMarkIITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC83F2801896DFE900626A9B /* Build configuration list for PBXNativeTarget "RandomePizzaMarkIITests" */;
+			buildPhases = (
+				EC83F2681896DFE900626A9B /* Sources */,
+				EC83F2691896DFE900626A9B /* Frameworks */,
+				EC83F26A1896DFE900626A9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC83F2721896DFE900626A9B /* PBXTargetDependency */,
+			);
+			name = RandomePizzaMarkIITests;
+			productName = RandomePizzaMarkIITests;
+			productReference = EC83F26C1896DFE900626A9B /* RandomePizzaMarkIITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC83F2431896DFE800626A9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RandomPizzaGenerator;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "James Owens";
+				TargetAttributes = {
+					EC83F26B1896DFE900626A9B = {
+						TestTargetID = EC83F24A1896DFE800626A9B;
+					};
+				};
+			};
+			buildConfigurationList = EC83F2461896DFE800626A9B /* Build configuration list for PBXProject "RandomePizzaMarkII" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC83F2421896DFE800626A9B;
+			productRefGroup = EC83F24C1896DFE800626A9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC83F24A1896DFE800626A9B /* RandomePizzaMarkII */,
+				EC83F26B1896DFE900626A9B /* RandomePizzaMarkIITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC83F2491896DFE800626A9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2C067B189AD30F0052B043 /* pizza.png in Resources */,
+				EC83F2671896DFE900626A9B /* Images.xcassets in Resources */,
+				EC2C067A189AD30F0052B043 /* Mushroom_Sketch.jpg in Resources */,
+				EC83F2591896DFE900626A9B /* InfoPlist.strings in Resources */,
+				EC83F2621896DFE900626A9B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC83F26A1896DFE900626A9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC83F2781896DFE900626A9B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC83F2471896DFE800626A9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC83F25F1896DFE900626A9B /* RandomPizzaGeneratorAppDelegate.m in Sources */,
+				EC2C067E189AD6790052B043 /* RandomPizzaGeneratortGeneratorBrain.m in Sources */,
+				EC2C0681189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.m in Sources */,
+				EC2C0687189ADC980052B043 /* Topping.m in Sources */,
+				EC83F25B1896DFE900626A9B /* main.m in Sources */,
+				EC83F2651896DFE900626A9B /* RandomPizzaGeneratorViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC83F2681896DFE900626A9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC83F27A1896DFE900626A9B /* RandomePizzaMarkIITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC83F2721896DFE900626A9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC83F24A1896DFE800626A9B /* RandomePizzaMarkII */;
+			targetProxy = EC83F2711896DFE900626A9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC83F2571896DFE900626A9B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC83F2581896DFE900626A9B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EC83F2601896DFE900626A9B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC83F2611896DFE900626A9B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC83F2761896DFE900626A9B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC83F2771896DFE900626A9B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC83F27B1896DFE900626A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EC83F27C1896DFE900626A9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC83F27E1896DFE900626A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RandomePizzaMarkII/RandomePizzaMarkII-Prefix.pch";
+				INFOPLIST_FILE = "RandomePizzaMarkII/RandomePizzaMarkII-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EC83F27F1896DFE900626A9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RandomePizzaMarkII/RandomePizzaMarkII-Prefix.pch";
+				INFOPLIST_FILE = "RandomePizzaMarkII/RandomePizzaMarkII-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EC83F2811896DFE900626A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RandomePizzaMarkII.app/RandomePizzaMarkII";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RandomePizzaMarkII/RandomePizzaMarkII-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RandomePizzaMarkIITests/RandomePizzaMarkIITests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EC83F2821896DFE900626A9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RandomePizzaMarkII.app/RandomePizzaMarkII";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RandomePizzaMarkII/RandomePizzaMarkII-Prefix.pch";
+				INFOPLIST_FILE = "RandomePizzaMarkIITests/RandomePizzaMarkIITests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC83F2461896DFE800626A9B /* Build configuration list for PBXProject "RandomePizzaMarkII" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC83F27B1896DFE900626A9B /* Debug */,
+				EC83F27C1896DFE900626A9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC83F27D1896DFE900626A9B /* Build configuration list for PBXNativeTarget "RandomePizzaMarkII" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC83F27E1896DFE900626A9B /* Debug */,
+				EC83F27F1896DFE900626A9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC83F2801896DFE900626A9B /* Build configuration list for PBXNativeTarget "RandomePizzaMarkIITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC83F2811896DFE900626A9B /* Debug */,
+				EC83F2821896DFE900626A9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC83F2431896DFE800626A9B /* Project object */;
+}
