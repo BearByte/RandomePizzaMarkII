@@ -34,8 +34,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     Topping *temp = [self.brain.toppings objectAtIndex:0];
     NSLog(@"%@",temp.name);
-    [self.tableView reloadData];
-    
+    self.tableView.allowsSelection = NO;
     
 }
 
@@ -67,7 +66,7 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    Topping *toppingAtIndex = self.brain.toppings[indexPath.row - 1];
+    Topping *toppingAtIndex = self.brain.toppings[indexPath.row];
     
     cell.textLabel.text = toppingAtIndex.name;
     
@@ -79,6 +78,14 @@
 {
     RandomPizzaGeneratorViewController *destination = [segue destinationViewController];
     destination.brain = self.brain; 
+}
+
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    
 }
 /*
 // Override to support conditional editing of the table view.
