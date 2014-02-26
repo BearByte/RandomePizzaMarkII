@@ -50,8 +50,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     Topping *temp = [self.brain.toppings objectAtIndex:0];
-    NSLog(@"%@",temp.name);
+    
     self.tableView.allowsSelection = YES;
+    [self makeIntoDicionary];
     
 }
 
@@ -73,7 +74,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"%lu",(unsigned long)[self.brain.toppings count]);
+    
     return [self.brain.toppings count];
 }
 
@@ -83,7 +84,10 @@
     RandomPizzaGeneratorCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     Topping *toppingAtIndex = self.brain.toppings[indexPath.row];
-    
+    if ([self.currentlySelectedToppings objectForKey:toppingAtIndex.name])
+    {
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+    }
     
     cell.textLabel.text = toppingAtIndex.name;
     cell.cellsTopping = toppingAtIndex;
@@ -137,6 +141,12 @@
         [temp addObject:[self.currentlySelectedToppings objectForKey:key]];
     }
     self.brain.toppingsPool = [temp mutableCopy];
+}
+-(void)makeIntoDicionary
+{
+    for (Topping *topping in self.brain.toppingsPool) {
+        [self.currentlySelectedToppings setObject:topping forKey:topping.name];
+    }
 }
 
 /*

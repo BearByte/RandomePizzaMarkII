@@ -50,7 +50,7 @@
 - (IBAction)sliderChanged:(id)sender
 {
     //update the desired number of toppings
-    self.numberOfToppings = [NSNumber numberWithFloat:(self.slider.value *10)];
+    self.numberOfToppings = [NSNumber numberWithFloat:(self.slider.value *[self.brain.toppingsPool count])];
     
     self.numberOfToppingsLabel.text  = [NSString stringWithFormat:@"%i",self.numberOfToppings.intValue]; //update the label with the current number of toppings selected
     
