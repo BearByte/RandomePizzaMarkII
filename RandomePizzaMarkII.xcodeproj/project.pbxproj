@@ -12,6 +12,7 @@
 		EC2C067E189AD6790052B043 /* RandomPizzaGeneratortGeneratorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2C067D189AD6790052B043 /* RandomPizzaGeneratortGeneratorBrain.m */; };
 		EC2C0681189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2C0680189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.m */; };
 		EC2C0687189ADC980052B043 /* Topping.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2C0686189ADC980052B043 /* Topping.m */; };
+		EC384C0018BD01E600CE2245 /* RandomPizzaGeneratorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC384BFF18BD01E600CE2245 /* RandomPizzaGeneratorCell.m */; };
 		EC83F24F1896DFE900626A9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F24E1896DFE900626A9B /* Foundation.framework */; };
 		EC83F2511896DFE900626A9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F2501896DFE900626A9B /* CoreGraphics.framework */; };
 		EC83F2531896DFE900626A9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F2521896DFE900626A9B /* UIKit.framework */; };
@@ -47,6 +48,8 @@
 		EC2C0680189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomPizzaGeneratorToppingViewController.m; sourceTree = "<group>"; };
 		EC2C0685189ADC980052B043 /* Topping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Topping.h; sourceTree = "<group>"; };
 		EC2C0686189ADC980052B043 /* Topping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Topping.m; sourceTree = "<group>"; };
+		EC384BFE18BD01E600CE2245 /* RandomPizzaGeneratorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomPizzaGeneratorCell.h; sourceTree = "<group>"; };
+		EC384BFF18BD01E600CE2245 /* RandomPizzaGeneratorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomPizzaGeneratorCell.m; sourceTree = "<group>"; };
 		EC83F24B1896DFE800626A9B /* RandomePizzaMarkII.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomePizzaMarkII.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC83F24E1896DFE900626A9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC83F2501896DFE900626A9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,6 +144,8 @@
 				EC83F2641896DFE900626A9B /* RandomPizzaGeneratorViewController.m */,
 				EC2C067F189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.h */,
 				EC2C0680189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.m */,
+				EC384BFE18BD01E600CE2245 /* RandomPizzaGeneratorCell.h */,
+				EC384BFF18BD01E600CE2245 /* RandomPizzaGeneratorCell.m */,
 				EC2C067C189AD6790052B043 /* RandomPizzaGeneratortGeneratorBrain.h */,
 				EC2C067D189AD6790052B043 /* RandomPizzaGeneratortGeneratorBrain.m */,
 				EC2C0677189AD30F0052B043 /* Pizza Graphics */,
@@ -283,6 +288,7 @@
 			files = (
 				EC83F25F1896DFE900626A9B /* RandomPizzaGeneratorAppDelegate.m in Sources */,
 				EC2C067E189AD6790052B043 /* RandomPizzaGeneratortGeneratorBrain.m in Sources */,
+				EC384C0018BD01E600CE2245 /* RandomPizzaGeneratorCell.m in Sources */,
 				EC2C0681189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.m in Sources */,
 				EC2C0687189ADC980052B043 /* Topping.m in Sources */,
 				EC83F25B1896DFE900626A9B /* main.m in Sources */,

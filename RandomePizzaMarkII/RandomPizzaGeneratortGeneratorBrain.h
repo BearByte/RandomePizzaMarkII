@@ -10,7 +10,9 @@
 #import "Topping.h"
 
 @interface RandomPizzaGeneratortGeneratorBrain : NSObject
-@property (nonatomic,strong)NSArray *toppings;
+@property (nonatomic,strong)NSArray *toppings; //all of the possible toppings
+@property (nonatomic, strong) NSArray *toppingsPool; //the toppings to be selected from when generate pressed
+
 
 -(NSArray *)generateWithNumberOfToppings:(int)number; 
 @end

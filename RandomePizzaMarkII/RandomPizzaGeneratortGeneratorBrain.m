@@ -16,15 +16,26 @@
 {
     if (!_toppings) {
         _toppings = [self createInitalToppings];
+        NSLog(@"This shouldn't ever be called");
     }
     return _toppings;
+}
+
+-(NSArray *)toppingsPool
+{
+    if (!_toppingsPool) {
+        _toppingsPool = self.toppings;
+        NSLog(@"This shouldn't ever be called");
+    }
+    
+    return _toppingsPool;
 }
 
 //The main generate loop. Returns an array of randomly chosen toppings. Take a desired number of toppings.
 -(NSArray *)generateWithNumberOfToppings:(int)number
 {
-    
-    NSMutableArray *temp = [self.toppings mutableCopy]; //create a mutable copy of the toppings array
+    NSLog(@"%lu",(unsigned long)[self.toppingsPool count]);
+    NSMutableArray *temp = [self.toppingsPool mutableCopy]; //create a mutable copy of the toppings array
     NSMutableArray *chosen = [[NSMutableArray alloc]init]; //creates an empty array to add chosen toppings to
     
     for (int i = 0; i<number; i++) {

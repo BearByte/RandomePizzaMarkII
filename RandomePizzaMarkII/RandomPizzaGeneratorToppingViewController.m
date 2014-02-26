@@ -10,9 +10,26 @@
 
 @interface RandomPizzaGeneratorToppingViewController ()
 
+@property (nonatomic, strong) NSMutableDictionary *currentlySelectedToppings; //the toppings that are checked in the table view
 @end
 
 @implementation RandomPizzaGeneratorToppingViewController
+- (IBAction)testButtonPressed:(id)sender
+{
+    [self prepareCurrentToppingsForSegue];
+    NSLog(@"Toppings: %lu",[self.brain.toppingsPool count]);
+}
+
+-(NSMutableDictionary *)currentlySelectedToppings
+{
+    if(!_currentlySelectedToppings)
+    {
+        _currentlySelectedToppings = [[NSMutableDictionary alloc]init];
+        
+    }
+    return _currentlySelectedToppings;
+}
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -34,7 +51,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     Topping *temp = [self.brain.toppings objectAtIndex:0];
     NSLog(@"%@",temp.name);
-    self.tableView.allowsSelection = NO;
+    self.tableView.allowsSelection = YES;
     
 }
 
@@ -55,20 +72,21 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     NSLog(@"%lu",(unsigned long)[self.brain.toppings count]);
     return [self.brain.toppings count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (RandomPizzaGeneratorCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    RandomPizzaGeneratorCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     Topping *toppingAtIndex = self.brain.toppings[indexPath.row];
     
+    
     cell.textLabel.text = toppingAtIndex.name;
+    cell.cellsTopping = toppingAtIndex;
     
     return cell;
 }
@@ -76,17 +94,51 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
     RandomPizzaGeneratorViewController *destination = [segue destinationViewController];
-    destination.brain = self.brain; 
+    
+    destination.brain = self.brain;
+    
+    
 }
 
-
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if ([[tableView cellForRowAtIndexPath:indexPath ] accessoryType] == UITableViewCellAccessoryCheckmark)
+    {
+        [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryNone];
+        RandomPizzaGeneratorCell *toppingCell = (RandomPizzaGeneratorCell *)[tableView cellForRowAtIndexPath:indexPath];
+        [self.currentlySelectedToppings removeObjectForKey:toppingCell.cellsTopping.name];
+        
+        
+         
+        
+    }
+    else
+    {
+        [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryCheckmark];//add a check mark
+        
+        //add the toppping in the cell to the dictionary of currently selected toppings
+        RandomPizzaGeneratorCell *toppingCell = (RandomPizzaGeneratorCell *)[tableView cellForRowAtIndexPath:indexPath];//
+        [self.currentlySelectedToppings setObject:toppingCell.cellsTopping forKey:toppingCell.cellsTopping.name];
+        
+    }
+    [self prepareCurrentToppingsForSegue]; 
     
 }
+
+-(void)prepareCurrentToppingsForSegue
+
+{
+    NSMutableArray *temp = [[NSMutableArray alloc]init];
+    for (NSString *key in self.currentlySelectedToppings) {
+        
+        [temp addObject:[self.currentlySelectedToppings objectForKey:key]];
+    }
+    self.brain.toppingsPool = [temp mutableCopy];
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RandomPizzaGeneratorViewController.h"
+#import "RandomPizzaGeneratorCell.h"
 
 
 @interface RandomPizzaGeneratorToppingViewController : UITableViewController
