@@ -29,6 +29,17 @@
         NSLog(@"Brain found"); 
         self.brain = [RandomPizzaGeneratortGeneratorBrain restoreState];
     }
+    [self setUpScreen];
+    
+}
+
+-(void)setUpScreen
+{
+    if(self.brain.userVegan)
+    {
+        
+    }
+    
 }
 -(RandomPizzaGeneratortGeneratorBrain *)brain //lazy instantation for the model
 
