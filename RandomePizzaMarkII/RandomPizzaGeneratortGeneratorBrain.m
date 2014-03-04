@@ -78,8 +78,14 @@
     Topping *olives = [[Topping alloc]initWithName:@"Olives" andVegitarian:YES andVegan:YES];
     Topping *bacon = [[Topping alloc]initWithName:@"Bacon" andVegitarian:NO andVegan:NO];
     Topping *pineapple = [[Topping alloc]initWithName:@"Pineapple" andVegitarian:YES andVegan:YES];
+    Topping *sausage = [[Topping alloc]initWithName:@"Sausage" andVegitarian:NO andVegan:NO];
+    Topping *jalapeno = [[Topping alloc] initWithName:@"Jalapano" andVegitarian:YES andVegan:YES];
+    Topping *anchovies = [[Topping alloc]initWithName:@"Anchovies" andVegitarian:NO andVegan:NO];
+    Topping *pepperoni = [[Topping alloc]initWithName:@"Pepperoni" andVegitarian:NO andVegan:NO];
     
-    return @[cheese,chicken,olives,bacon,pineapple];
+    
+    
+    return @[cheese,chicken,olives,bacon,pineapple, sausage, jalapeno, anchovies, pepperoni];
 }
 -(void)saveState
 {
