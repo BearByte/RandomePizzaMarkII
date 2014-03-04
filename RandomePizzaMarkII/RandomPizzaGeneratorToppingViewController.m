@@ -50,7 +50,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    Topping *temp = [self.brain.toppings objectAtIndex:0];
     
     self.tableView.allowsSelection = YES;
     [self makeIntoDicionary];
@@ -99,6 +98,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    [self.brain saveState];
     
     RandomPizzaGeneratorViewController *destination = [segue destinationViewController];
     
@@ -141,7 +141,10 @@
         
         [temp addObject:[self.currentlySelectedToppings objectForKey:key]];
     }
-    self.brain.toppingsPool = [temp mutableCopy];
+    self.brain.toppingsPool = [temp copy];
+    [self.brain saveState];
+    
+    
 }
 -(void)makeIntoDicionary
 {
