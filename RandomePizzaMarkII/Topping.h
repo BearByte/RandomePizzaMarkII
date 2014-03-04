@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Topping : NSObject
+@interface Topping : NSObject <NSCoding>
 @property (nonatomic,strong) NSString *name; //the name of the topping
 //@property (nonatomic,strong)UIImage *toppingImage;
 @property (nonatomic) BOOL vegitarian; //vegitarian?

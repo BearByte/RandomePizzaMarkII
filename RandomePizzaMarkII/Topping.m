@@ -10,6 +10,29 @@
 
 @implementation Topping
 
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [self init];
+    if (self) {
+        
+    
+        self.name = [aDecoder decodeObjectForKey:@"Name"];
+        self.vegitarian = [aDecoder decodeBoolForKey:@"Vegitarian"];
+        self.vegan = [aDecoder decodeBoolForKey:@"Vegan"];
+        self.enabled = [aDecoder decodeBoolForKey:@"Enabled"];
+        
+    }
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.name forKey:@"Name"];
+    [aCoder encodeBool:self.vegitarian forKey:@"Vegitarian"];
+    [aCoder encodeBool:self.vegan forKey:@"Vegan"];
+    [aCoder encodeBool:self.enabled forKey:@"Enabled"];
+
+}
 
 //designated init
 -(instancetype)initWithName:(NSString *)name andVegitarian:(BOOL)vegitarian andVegan:(BOOL)vegan
@@ -23,6 +46,7 @@
     self.enabled = YES; 
     return self;
 }
+
 
 
 @end

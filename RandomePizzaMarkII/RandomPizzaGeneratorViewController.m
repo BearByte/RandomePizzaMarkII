@@ -21,7 +21,15 @@
 
 @implementation RandomPizzaGeneratorViewController
 
-
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self sliderChanged:Nil];
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:@"Model"]) {
+        NSLog(@"Brain found"); 
+        self.brain = [RandomPizzaGeneratortGeneratorBrain restoreState];
+    }
+}
 -(RandomPizzaGeneratortGeneratorBrain *)brain //lazy instantation for the model
 
 {
@@ -29,7 +37,6 @@
         _brain = [[RandomPizzaGeneratortGeneratorBrain alloc]init];
     }
     return _brain;
-    
 }
 
 
@@ -38,11 +45,7 @@
     NSLog(@"Called");
  
     NSArray *result = [self.brain generateWithNumberOfToppings:[self.numberOfToppings intValue]];
-    /*
-    for (Topping *topping in result) {
-        NSLog(@"%@",topping.name);
-    }
-    */
+  
     [self displayToppings:result];
     
     
@@ -84,6 +87,30 @@
     
 }
 
+- (IBAction)vegitarianSwitchChanged
+{
+    self.brain.userVegitarian = self.vegitarianSwitch.on;
+    [self.brain saveState];
+    
+    
+}
 
+- (IBAction)veganSwitchChanged
+{
+    self.brain.userVegan = self.veganSwitch.on;
+    [self.brain saveState];
+    
 
+}
+
+- (IBAction)testMethod
+{
+    if (self.brain.userVegan) {
+        NSLog(@"Uservegan is true");
+    }
+    else
+    {
+        NSLog(@"Uservegan is false");
+    }
+}
 @end

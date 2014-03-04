@@ -9,10 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "Topping.h"
 
-@interface RandomPizzaGeneratortGeneratorBrain : NSObject
+@interface RandomPizzaGeneratortGeneratorBrain : NSObject<NSCoding> 
 @property (nonatomic,strong)NSArray *toppings; //all of the possible toppings
 @property (nonatomic, strong) NSArray *toppingsPool; //the toppings to be selected from when generate pressed
+@property (nonatomic) BOOL userVegitarian;
+@property (nonatomic) BOOL userVegan;
 
 
--(NSArray *)generateWithNumberOfToppings:(int)number; 
+-(NSArray *)generateWithNumberOfToppings:(int)number;
+-(void)saveState;
++(RandomPizzaGeneratortGeneratorBrain *)restoreState;
+
 @end

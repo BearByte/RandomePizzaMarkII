@@ -10,6 +10,5 @@
 #import "RandomPizzaGeneratortGeneratorBrain.h"
 
 @interface RandomPizzaGeneratorViewController : UIViewController
-@property (nonatomic,strong) RandomPizzaGeneratortGeneratorBrain *brain; //the model for the application 
-
+@property (nonatomic,strong) RandomPizzaGeneratortGeneratorBrain *brain; //the model for the application
 @end

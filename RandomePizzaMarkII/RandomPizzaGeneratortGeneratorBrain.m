@@ -10,13 +10,35 @@
 
 @implementation RandomPizzaGeneratortGeneratorBrain
 
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    
+    self = [self init];
+    if (self) {
+        self.toppings = [aDecoder decodeObjectForKey:@"Toppings"];
+        self.toppingsPool = [aDecoder decodeObjectForKey:@"ToppingsPool"];
+        self.userVegitarian = [aDecoder decodeBoolForKey:@"UserVegitarian"];
+        self.userVegan = [aDecoder decodeBoolForKey:@"UserVegan"];
+    }
+    return self;
+    
+}
 
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.toppings forKey:@"Toppings"];
+    [aCoder encodeObject:self.toppingsPool forKey:@"ToppingsPool"];
+    [aCoder encodeBool:self.userVegitarian forKey:@"UserVegitarian"];
+    [aCoder encodeBool:self.userVegan forKey:@"UserVegan"]; 
+
+    
+
+}
 //Lazy Instansations for the toppings variable
 -(NSArray *)toppings
 {
     if (!_toppings) {
         _toppings = [self createInitalToppings];
-        NSLog(@"This shouldn't ever be called");
     }
     return _toppings;
 }
@@ -25,7 +47,7 @@
 {
     if (!_toppingsPool) {
         _toppingsPool = self.toppings;
-        NSLog(@"This shouldn't ever be called");
+        NSLog(@"This shouldn't ever be shown");
     }
     
     return _toppingsPool;
@@ -58,6 +80,19 @@
     Topping *pineapple = [[Topping alloc]initWithName:@"Pineapple" andVegitarian:YES andVegan:YES];
     
     return @[cheese,chicken,olives,bacon,pineapple];
+}
+-(void)saveState
+{
+    NSData *model =[NSKeyedArchiver archivedDataWithRootObject:self];
+    [[NSUserDefaults standardUserDefaults] setObject:model forKey:@"Model"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++(RandomPizzaGeneratortGeneratorBrain *)restoreState
+{
+    NSData *modelData = [[NSUserDefaults standardUserDefaults] objectForKey:@"Model"];
+    RandomPizzaGeneratortGeneratorBrain *model = [NSKeyedUnarchiver unarchiveObjectWithData:modelData];
+    return model; 
 }
 
 
