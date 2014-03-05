@@ -8,6 +8,8 @@
 
 #import "RandomPizzaGeneratortGeneratorBrain.h"
 
+
+
 @implementation RandomPizzaGeneratortGeneratorBrain
 
 -(id)initWithCoder:(NSCoder *)aDecoder
@@ -48,7 +50,7 @@
 {
     if (!_toppingsPool) {
         _toppingsPool = self.toppings;
-        NSLog(@"This shouldn't ever be shown");
+        
     }
     
     return _toppingsPool;

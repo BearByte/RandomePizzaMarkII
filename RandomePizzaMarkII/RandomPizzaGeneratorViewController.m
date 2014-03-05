@@ -30,6 +30,15 @@
         self.brain = [RandomPizzaGeneratortGeneratorBrain restoreState];
     }
     [self setUpScreen];
+    self.numberOfToppings = [NSNumber numberWithFloat:(self.slider.value * ([self.brain.toppingsPool count]-1)+1)];
+    
+    self.numberOfToppingsLabel.text  = [NSString stringWithFormat:@"%i",self.numberOfToppings.intValue];
+    
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self sliderChanged:nil];
     
 }
 
@@ -53,7 +62,7 @@
             [self.vegitarianSwitch setOn:NO];
         }
     }
-    [self sliderChanged:nil]; 
+    
     
 }
 -(RandomPizzaGeneratortGeneratorBrain *)brain //lazy instantation for the model
