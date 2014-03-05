@@ -39,7 +39,7 @@
     {
         [self.veganSwitch setOn:YES];
         [self.vegitarianSwitch setOn:YES];
-        self.vegitarianSwitch.userInteractionEnabled = NO;
+        self.vegitarianSwitch.enabled = NO;
     }
     else
     {
@@ -53,12 +53,14 @@
             [self.vegitarianSwitch setOn:NO];
         }
     }
+    [self sliderChanged:nil]; 
     
 }
 -(RandomPizzaGeneratortGeneratorBrain *)brain //lazy instantation for the model
 
 {
-    if (!_brain) {
+    if (!_brain)
+    {
         _brain = [[RandomPizzaGeneratortGeneratorBrain alloc]init];
     }
     return _brain;
@@ -67,18 +69,15 @@
 
 - (IBAction)generatePressed:(id)sender
 {
-    NSLog(@"Called");
- 
-    NSArray *result = [self.brain generateWithNumberOfToppings:[self.numberOfToppings intValue]];
-  
-    [self displayToppings:result];
     
+    NSArray *result = [self.brain generateWithNumberOfToppings:[self.numberOfToppings intValue]];
+    [self displayToppings:result];
     
 }
 - (IBAction)sliderChanged:(id)sender
 {
     //update the desired number of toppings
-    self.numberOfToppings = [NSNumber numberWithFloat:(self.slider.value *[self.brain.toppingsPool count])];
+    self.numberOfToppings = [NSNumber numberWithFloat:(self.slider.value * ([self.brain.toppingsPool count]-1)+1)];
     
     self.numberOfToppingsLabel.text  = [NSString stringWithFormat:@"%i",self.numberOfToppings.intValue]; //update the label with the current number of toppings selected
     
@@ -139,12 +138,6 @@
 
 - (IBAction)testMethod
 {
-    if (self.brain.userVegan) {
-        NSLog(@"Uservegan is true");
-    }
-    else
-    {
-        NSLog(@"Uservegan is false");
-    }
+
 }
 @end

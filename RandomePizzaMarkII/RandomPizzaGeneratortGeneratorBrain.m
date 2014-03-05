@@ -37,7 +37,8 @@
 //Lazy Instansations for the toppings variable
 -(NSArray *)toppings
 {
-    if (!_toppings) {
+    if (!_toppings)
+    {
         _toppings = [self createInitalToppings];
     }
     return _toppings;
