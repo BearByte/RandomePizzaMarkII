@@ -37,7 +37,21 @@
 {
     if(self.brain.userVegan)
     {
-        
+        [self.veganSwitch setOn:YES];
+        [self.vegitarianSwitch setOn:YES];
+        self.vegitarianSwitch.userInteractionEnabled = NO;
+    }
+    else
+    {
+        [self.veganSwitch setOn:NO];
+        if (self.brain.userVegitarian) {
+            [self.vegitarianSwitch setOn:YES];
+            
+        }
+        else
+        {
+            [self.vegitarianSwitch setOn:NO];
+        }
     }
     
 }
@@ -109,6 +123,15 @@
 - (IBAction)veganSwitchChanged
 {
     self.brain.userVegan = self.veganSwitch.on;
+    if (self.veganSwitch.on) {
+        NSLog(@"Vegitarian goes on now");
+        [self.vegitarianSwitch setOn:YES];
+        self.vegitarianSwitch.enabled = NO;
+    }
+    else
+    {
+        self.vegitarianSwitch.enabled = YES;
+    }
     [self.brain saveState];
     
 
