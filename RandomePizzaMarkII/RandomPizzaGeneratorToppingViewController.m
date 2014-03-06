@@ -11,13 +11,13 @@
 @interface RandomPizzaGeneratorToppingViewController ()
 
 @property (nonatomic, strong) NSMutableDictionary *currentlySelectedToppings; //the toppings that are checked in the table view
+@property (nonatomic, strong) NSMutableDictionary *indexPathOfTopping; //holds the index path based on the topping name which is the key.
 @end
 
 @implementation RandomPizzaGeneratorToppingViewController
 - (IBAction)testButtonPressed:(id)sender
 {
     [self prepareCurrentToppingsForSegue];
-    NSLog(@"Toppings: %lu",[self.brain.toppingsPool count]);
 }
 
 -(NSMutableDictionary *)currentlySelectedToppings
@@ -62,6 +62,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(NSMutableDictionary *)indexPathOfTopping
+{
+    if (!_indexPathOfTopping) {
+        _indexPathOfTopping = [[NSMutableDictionary alloc]init];
+    }
+    return _indexPathOfTopping;
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -84,6 +93,8 @@
     RandomPizzaGeneratorCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     Topping *toppingAtIndex = self.brain.toppings[indexPath.row];
+   
+    
     if ([self.currentlySelectedToppings objectForKey:toppingAtIndex.name])
     {
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
@@ -91,7 +102,12 @@
     
     cell.textLabel.text = toppingAtIndex.name;
     cell.cellsTopping = toppingAtIndex;
-    
+    if (![self.indexPathOfTopping objectForKey:toppingAtIndex.name])
+    {
+        [self.indexPathOfTopping setObject:cell forKey:toppingAtIndex.name];
+        NSLog(@"Added cell to dictionary");
+        
+    }
     return cell;
 }
 
@@ -112,10 +128,14 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if ([[tableView cellForRowAtIndexPath:indexPath ] accessoryType] == UITableViewCellAccessoryCheckmark)
     {
+        
         [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryNone];
         RandomPizzaGeneratorCell *toppingCell = (RandomPizzaGeneratorCell *)[tableView cellForRowAtIndexPath:indexPath];
         [self.currentlySelectedToppings removeObjectForKey:toppingCell.cellsTopping.name];
-        
+        if ([self.currentlySelectedToppings count] == 1) {
+            NSLog(@"One Topping Left");
+            [self disableLastCell];
+        }
         
          
         
@@ -130,6 +150,14 @@
         
     }
     [self prepareCurrentToppingsForSegue]; 
+    
+}
+
+-(void)disableLastCell
+{
+
+    RandomPizzaGeneratorCell *cell =  [self.indexPathOfTopping objectForKey:[[[self.currentlySelectedToppings allValues]objectAtIndex:0]name]];
+    cell.userInteractionEnabled = NO; 
     
 }
 
