@@ -12,12 +12,47 @@
 
 @property (nonatomic, strong) NSMutableDictionary *currentlySelectedToppings; //the toppings that are checked in the table view
 @property (nonatomic, strong) NSMutableDictionary *indexPathOfTopping; //holds the index path based on the topping name which is the key.
+@property (nonatomic, strong) NSMutableArray *disabledVegitarian;
+@property (nonatomic, strong) NSMutableArray *disabledVegan;
 @end
 
 @implementation RandomPizzaGeneratorToppingViewController
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    [self disableSpeicalCells];
+    
+}
 - (IBAction)testButtonPressed:(id)sender
 {
-    [self prepareCurrentToppingsForSegue];
+    for (RandomPizzaGeneratorCell *cell in self.disabledVegan) {
+        cell.userInteractionEnabled = YES;
+        cell.textLabel.enabled = YES;
+    }
+    for (RandomPizzaGeneratorCell *cell in self.disabledVegitarian) {
+        cell.userInteractionEnabled = YES;
+        cell.textLabel.enabled = YES;
+    }
+}
+
+-(NSMutableArray *)disabledVegan
+{
+    if (!_disabledVegan)
+    {
+        _disabledVegan = [[NSMutableArray alloc]init];
+    }
+    return _disabledVegan;
+}
+
+-(NSMutableArray *)disabledVegitarian
+{
+    if (!_disabledVegitarian)
+    {
+        _disabledVegitarian = [[NSMutableArray alloc]init];
+        
+    }
+    return _disabledVegitarian;
 }
 
 -(NSMutableDictionary *)currentlySelectedToppings
@@ -89,6 +124,7 @@
 
 - (RandomPizzaGeneratorCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *CellIdentifier = @"Cell";
     RandomPizzaGeneratorCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
@@ -105,7 +141,6 @@
     if (![self.indexPathOfTopping objectForKey:toppingAtIndex.name])
     {
         [self.indexPathOfTopping setObject:cell forKey:toppingAtIndex.name];
-        NSLog(@"Added cell to dictionary");
         
     }
     return cell;
@@ -132,10 +167,6 @@
         [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryNone];
         RandomPizzaGeneratorCell *toppingCell = (RandomPizzaGeneratorCell *)[tableView cellForRowAtIndexPath:indexPath];
         [self.currentlySelectedToppings removeObjectForKey:toppingCell.cellsTopping.name];
-        if ([self.currentlySelectedToppings count] == 1) {
-            NSLog(@"One Topping Left");
-            [self disableLastCell];
-        }
         
          
         
@@ -153,12 +184,40 @@
     
 }
 
--(void)disableLastCell
+//disables the cells that don't comply if the user is vegitarian or vegan
+-(void)disableSpeicalCells
 {
-
-    RandomPizzaGeneratorCell *cell =  [self.indexPathOfTopping objectForKey:[[[self.currentlySelectedToppings allValues]objectAtIndex:0]name]];
-    cell.userInteractionEnabled = NO; 
-    
+    if (self.brain.userVegan)
+    {
+        for (Topping *topping in self.brain.toppings)
+        {
+            if (!topping.vegan)
+            {
+                RandomPizzaGeneratorCell *cell = [self.indexPathOfTopping objectForKey:topping.name];
+                [cell setAccessoryType:UITableViewCellAccessoryNone];
+                cell.userInteractionEnabled = NO;
+                cell.textLabel.enabled = NO;
+                [self.disabledVegan addObject:cell];
+            }
+        }
+        
+    }
+    else if (self.brain.userVegitarian)
+    {
+        NSLog(@"User is just veg");
+        for (Topping *topping in self.brain.toppings)
+        {
+            if (!topping.vegitarian)
+            {
+                RandomPizzaGeneratorCell *cell = [self.indexPathOfTopping objectForKey:topping.name];
+                [cell setAccessoryType:UITableViewCellAccessoryNone];
+                cell.userInteractionEnabled = NO;
+                cell.textLabel.enabled = NO;
+                [self.disabledVegan addObject:cell];
+            }
+        }
+        
+    }
 }
 
 -(void)prepareCurrentToppingsForSegue
@@ -181,6 +240,7 @@
     }
 }
 
+#pragma mark commented out
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

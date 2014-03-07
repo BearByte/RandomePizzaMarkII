@@ -78,18 +78,33 @@
 
 - (IBAction)generatePressed:(id)sender
 {
+    if ([self.brain.toppingsPool count]==0)
+    {
+        [[[UIAlertView alloc]initWithTitle:@"You can't do that" message:@"Please select at lease one topping" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil]show];
+        
+    }
+    else
+    {
     
-    NSArray *result = [self.brain generateWithNumberOfToppings:[self.numberOfToppings intValue]];
-    [self displayToppings:result];
-    
+        NSArray *result = [self.brain generateWithNumberOfToppings:[self.numberOfToppings intValue]];
+        [self displayToppings:result];
+    }
 }
 - (IBAction)sliderChanged:(id)sender
 {
     //update the desired number of toppings
+    if ([self.brain.toppingsPool count] == 0)
+    {
+        self.numberOfToppingsLabel.text = @"0";
+        
+    }
+   
+    else
+    {
     self.numberOfToppings = [NSNumber numberWithFloat:(self.slider.value * ([self.brain.toppingsPool count]-1)+1)];
     
     self.numberOfToppingsLabel.text  = [NSString stringWithFormat:@"%i",self.numberOfToppings.intValue]; //update the label with the current number of toppings selected
-    
+    }
     
     
 }
