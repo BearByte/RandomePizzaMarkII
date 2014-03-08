@@ -147,7 +147,6 @@
 {
     self.brain.userVegan = self.veganSwitch.on;
     if (self.veganSwitch.on) {
-        NSLog(@"Vegitarian goes on now");
         [self.vegitarianSwitch setOn:YES];
         self.vegitarianSwitch.enabled = NO;
     }
@@ -159,6 +158,7 @@
     
 
 }
+
 
 - (IBAction)testMethod
 {

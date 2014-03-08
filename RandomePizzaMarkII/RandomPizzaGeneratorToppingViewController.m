@@ -11,7 +11,7 @@
 @interface RandomPizzaGeneratorToppingViewController ()
 
 @property (nonatomic, strong) NSMutableDictionary *currentlySelectedToppings; //the toppings that are checked in the table view
-@property (nonatomic, strong) NSMutableDictionary *indexPathOfTopping; //holds the index path based on the topping name which is the key.
+@property (nonatomic, strong) NSMutableDictionary *cellForTopping; //holds the index path based on the topping name which is the key.
 @property (nonatomic, strong) NSMutableArray *disabledVegitarian;
 @property (nonatomic, strong) NSMutableArray *disabledVegan;
 @end
@@ -22,6 +22,7 @@
 {
     [super viewDidAppear:YES];
     [self disableSpeicalCells];
+    self.currentlySelectedToppings = [self.brain.toppingsPool mutableCopy]; 
     
 }
 - (IBAction)testButtonPressed:(id)sender
@@ -87,7 +88,6 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.tableView.allowsSelection = YES;
-    [self makeIntoDicionary];
     
 }
 
@@ -97,12 +97,12 @@
     // Dispose of any resources that can be recreated.
 }
 
--(NSMutableDictionary *)indexPathOfTopping
+-(NSMutableDictionary *)cellForTopping
 {
-    if (!_indexPathOfTopping) {
-        _indexPathOfTopping = [[NSMutableDictionary alloc]init];
+    if (!_cellForTopping) {
+        _cellForTopping = [[NSMutableDictionary alloc]init];
     }
-    return _indexPathOfTopping;
+    return _cellForTopping;
 }
 
 
@@ -138,9 +138,9 @@
     
     cell.textLabel.text = toppingAtIndex.name;
     cell.cellsTopping = toppingAtIndex;
-    if (![self.indexPathOfTopping objectForKey:toppingAtIndex.name])
+    if (![self.cellForTopping objectForKey:toppingAtIndex.name])
     {
-        [self.indexPathOfTopping setObject:cell forKey:toppingAtIndex.name];
+        [self.cellForTopping setObject:cell forKey:toppingAtIndex.name];
         
     }
     return cell;
@@ -193,7 +193,7 @@
         {
             if (!topping.vegan)
             {
-                RandomPizzaGeneratorCell *cell = [self.indexPathOfTopping objectForKey:topping.name];
+                RandomPizzaGeneratorCell *cell = [self.cellForTopping objectForKey:topping.name];
                 [cell setAccessoryType:UITableViewCellAccessoryNone];
                 cell.userInteractionEnabled = NO;
                 cell.textLabel.enabled = NO;
@@ -209,7 +209,7 @@
         {
             if (!topping.vegitarian)
             {
-                RandomPizzaGeneratorCell *cell = [self.indexPathOfTopping objectForKey:topping.name];
+                RandomPizzaGeneratorCell *cell = [self.cellForTopping objectForKey:topping.name];
                 [cell setAccessoryType:UITableViewCellAccessoryNone];
                 cell.userInteractionEnabled = NO;
                 cell.textLabel.enabled = NO;

@@ -8,9 +8,12 @@
 
 #import "RandomPizzaGeneratortGeneratorBrain.h"
 
+@interface RandomPizzaGeneratortGeneratorBrain ()
+@property (nonatomic, strong) NSMutableArray *toppingPoolDictionary;
 
-
+@end
 @implementation RandomPizzaGeneratortGeneratorBrain
+
 
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -46,10 +49,10 @@
     return _toppings;
 }
 
--(NSArray *)toppingsPool
+-(NSDictionary *)toppingsPool
 {
     if (!_toppingsPool) {
-        _toppingsPool = self.toppings;
+        _toppingsPool =  [self makeIntoDicionary];
         
     }
     
@@ -59,14 +62,15 @@
 //The main generate loop. Returns an array of randomly chosen toppings. Take a desired number of toppings.
 -(NSArray *)generateWithNumberOfToppings:(int)number
 {
-    NSLog(@"%lu",(unsigned long)[self.toppingsPool count]);
-    NSMutableArray *temp = [self.toppingsPool mutableCopy]; //create a mutable copy of the toppings array
+    NSMutableDictionary *temp = [self.toppingsPool mutableCopy]; //create a mutable copy of the toppings array
     NSMutableArray *chosen = [[NSMutableArray alloc]init]; //creates an empty array to add chosen toppings to
+    NSMutableArray *keys = [[temp allKeys] mutableCopy];
+    
     
     for (int i = 0; i<number; i++) {
-        int random = (arc4random()% temp.count); //choose a random index
-        [chosen addObject:[temp objectAtIndex:random]]; //add it to the chosen array
-        [temp removeObjectAtIndex:random]; //remove the topping from the temprary array so it will not be chosen again
+        int random = (arc4random()% keys.count)-1; //choose a random index
+        [chosen addObject:[temp objectForKey:[keys objectAtIndex:random]]]; //add it to the chosen array
+        [keys removeObjectAtIndex:random]; //remove the topping from the temprary array so it will not be chosen again
         
     }
     return [chosen copy]; //return the chosen toppings as an NSArray (immuatable)
@@ -96,7 +100,31 @@
     [[NSUserDefaults standardUserDefaults] setObject:model forKey:@"Model"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
-
+/*
+-(void)updateEnabledToppings
+{
+    if (self.userVegan)
+    {
+        for (Topping *topping in self.toppings)
+        {
+            if (!topping.vegan)
+            {
+                topping.enabled = NO;
+                self.top
+            }
+        }
+        
+    }
+    else if (self.userVegitarian)
+    {
+        for (Topping *topping in self.toppings) {
+            if (!topping.vegitarian) {
+                topping.enabled = NO;
+            }
+        }
+    }
+}
+ */
 +(RandomPizzaGeneratortGeneratorBrain *)restoreState
 {
     NSData *modelData = [[NSUserDefaults standardUserDefaults] objectForKey:@"Model"];
@@ -104,6 +132,18 @@
     return model; 
 }
 
+-(NSDictionary *)makeIntoDicionary
+
+
+{
+    NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
+    for (Topping *topping in self.toppings)
+    {
+        [temp setObject:topping forKey:topping.name];
+    }
+    return [temp copy];
+    
+}
 
 
 @end
