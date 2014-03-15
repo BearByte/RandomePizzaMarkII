@@ -18,15 +18,23 @@
 
 @implementation RandomPizzaGeneratorToppingViewController
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.currentlySelectedToppings = [self.brain.toppingsPool mutableCopy];
+
+}
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:YES];
     [self disableSpeicalCells];
-    self.currentlySelectedToppings = [self.brain.toppingsPool mutableCopy]; 
+    self.currentlySelectedToppings = [self.brain.toppingsPool mutableCopy];
+    
     
 }
 - (IBAction)testButtonPressed:(id)sender
 {
+    /*
     for (RandomPizzaGeneratorCell *cell in self.disabledVegan) {
         cell.userInteractionEnabled = YES;
         cell.textLabel.enabled = YES;
@@ -35,6 +43,12 @@
         cell.userInteractionEnabled = YES;
         cell.textLabel.enabled = YES;
     }
+     */
+    NSLog(@"%lu",(unsigned long)[self.currentlySelectedToppings count]);
+    for (NSString *key in self.currentlySelectedToppings) {
+        NSLog(@"%@",key);
+    }
+    
 }
 
 -(NSMutableArray *)disabledVegan
@@ -124,13 +138,13 @@
 
 - (RandomPizzaGeneratorCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     static NSString *CellIdentifier = @"Cell";
     RandomPizzaGeneratorCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     Topping *toppingAtIndex = self.brain.toppings[indexPath.row];
    
     
+    NSLog(@"%@",toppingAtIndex.name);
     if ([self.currentlySelectedToppings objectForKey:toppingAtIndex.name])
     {
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
@@ -223,6 +237,7 @@
 -(void)prepareCurrentToppingsForSegue
 
 {
+    /*
     NSMutableArray *temp = [[NSMutableArray alloc]init];
     for (NSString *key in self.currentlySelectedToppings) {
         
@@ -230,11 +245,15 @@
     }
     self.brain.toppingsPool = [temp copy];
     [self.brain saveState];
+    */
+    self.brain.toppingsPool = [self.currentlySelectedToppings copy];
     
     
 }
 -(void)makeIntoDicionary
+
 {
+    NSLog(@"Making dictionary...."); 
     for (Topping *topping in self.brain.toppingsPool) {
         [self.currentlySelectedToppings setObject:topping forKey:topping.name];
     }

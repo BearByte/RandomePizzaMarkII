@@ -52,7 +52,7 @@
 -(NSDictionary *)toppingsPool
 {
     if (!_toppingsPool) {
-        _toppingsPool =  [self makeIntoDicionary];
+        _toppingsPool =  [[NSDictionary alloc]init]; 
         
     }
     
@@ -63,12 +63,13 @@
 -(NSArray *)generateWithNumberOfToppings:(int)number
 {
     NSMutableDictionary *temp = [self.toppingsPool mutableCopy]; //create a mutable copy of the toppings array
+    
     NSMutableArray *chosen = [[NSMutableArray alloc]init]; //creates an empty array to add chosen toppings to
     NSMutableArray *keys = [[temp allKeys] mutableCopy];
     
     
     for (int i = 0; i<number; i++) {
-        int random = (arc4random()% keys.count)-1; //choose a random index
+        int random = 1.*rand()/RAND_MAX * [keys count]; //choose a random index
         [chosen addObject:[temp objectForKey:[keys objectAtIndex:random]]]; //add it to the chosen array
         [keys removeObjectAtIndex:random]; //remove the topping from the temprary array so it will not be chosen again
         
@@ -100,31 +101,7 @@
     [[NSUserDefaults standardUserDefaults] setObject:model forKey:@"Model"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
-/*
--(void)updateEnabledToppings
-{
-    if (self.userVegan)
-    {
-        for (Topping *topping in self.toppings)
-        {
-            if (!topping.vegan)
-            {
-                topping.enabled = NO;
-                self.top
-            }
-        }
-        
-    }
-    else if (self.userVegitarian)
-    {
-        for (Topping *topping in self.toppings) {
-            if (!topping.vegitarian) {
-                topping.enabled = NO;
-            }
-        }
-    }
-}
- */
+
 +(RandomPizzaGeneratortGeneratorBrain *)restoreState
 {
     NSData *modelData = [[NSUserDefaults standardUserDefaults] objectForKey:@"Model"];
