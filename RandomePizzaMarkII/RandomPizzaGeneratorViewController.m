@@ -25,7 +25,8 @@
 {
     [super viewDidLoad];
     [self sliderChanged:Nil];
-    if ([[NSUserDefaults standardUserDefaults]objectForKey:@"Model"]) {
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:@"Model"])
+    {
         NSLog(@"Brain found"); 
         self.brain = [RandomPizzaGeneratortGeneratorBrain restoreState];
     }
@@ -80,7 +81,7 @@
 {
     if ([self.brain.toppingsPool count]==0)
     {
-        [[[UIAlertView alloc]initWithTitle:@"You can't do that" message:@"Please select at lease one topping" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil]show];
+        [[[UIAlertView alloc]initWithTitle:@"You can't do that" message:@"Please select at least one topping" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil]show];
         
     }
     else
@@ -120,7 +121,7 @@
 
         toppingsString =[toppingsString stringByAppendingString:[NSString stringWithFormat:@", %@",topping.name]];
     }
-    UIAlertView *toppingsAlert=  [[UIAlertView alloc]initWithTitle:@"Piza Generated" message:toppingsString delegate:self cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
+    UIAlertView *toppingsAlert=  [[UIAlertView alloc]initWithTitle:@"Pizza Generated" message:toppingsString delegate:self cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
     [toppingsAlert show];
 
                                 
@@ -138,6 +139,8 @@
 - (IBAction)vegitarianSwitchChanged
 {
     self.brain.userVegitarian = self.vegitarianSwitch.on;
+    [self.brain updateForVegChanged];
+    [self sliderChanged:nil];
     [self.brain saveState];
     
     
@@ -154,6 +157,8 @@
     {
         self.vegitarianSwitch.enabled = YES;
     }
+    [self.brain updateForVeganChanged];
+    [self sliderChanged:nil]; 
     [self.brain saveState];
     
 

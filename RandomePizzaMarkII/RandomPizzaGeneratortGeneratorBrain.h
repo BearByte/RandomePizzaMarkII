@@ -16,10 +16,17 @@
 @property (nonatomic) BOOL userVegan;
 
 
+
+
 -(NSArray *)generateWithNumberOfToppings:(int)number;
 -(void)saveState;
 -(void)updateEnabledToppings;
+-(void)updateForVegChanged;
+-(void)updateForVeganChanged;
+
+
 +(RandomPizzaGeneratortGeneratorBrain *)restoreState;
+
 
 
 @end

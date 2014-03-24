@@ -45,10 +45,7 @@
     }
      */
     NSLog(@"%lu",(unsigned long)[self.currentlySelectedToppings count]);
-    for (NSString *key in self.currentlySelectedToppings) {
-        NSLog(@"%@",key);
-    }
-    
+  
 }
 
 -(NSMutableArray *)disabledVegan
@@ -155,7 +152,6 @@
     if (![self.cellForTopping objectForKey:toppingAtIndex.name])
     {
         [self.cellForTopping setObject:cell forKey:toppingAtIndex.name];
-        
     }
     return cell;
 }
@@ -180,6 +176,7 @@
         
         [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryNone];
         RandomPizzaGeneratorCell *toppingCell = (RandomPizzaGeneratorCell *)[tableView cellForRowAtIndexPath:indexPath];
+        toppingCell.cellsTopping.enabled = NO;
         [self.currentlySelectedToppings removeObjectForKey:toppingCell.cellsTopping.name];
         
          
@@ -191,6 +188,7 @@
         
         //add the toppping in the cell to the dictionary of currently selected toppings
         RandomPizzaGeneratorCell *toppingCell = (RandomPizzaGeneratorCell *)[tableView cellForRowAtIndexPath:indexPath];//
+        toppingCell.cellsTopping.enabled = YES;
         [self.currentlySelectedToppings setObject:toppingCell.cellsTopping forKey:toppingCell.cellsTopping.name];
         
     }

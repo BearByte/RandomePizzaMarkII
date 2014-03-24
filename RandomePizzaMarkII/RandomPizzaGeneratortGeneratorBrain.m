@@ -10,6 +10,9 @@
 
 @interface RandomPizzaGeneratortGeneratorBrain ()
 @property (nonatomic, strong) NSMutableArray *toppingPoolDictionary;
+@property (nonatomic, strong)NSMutableArray *removedVeganToppings;
+@property (nonatomic, strong) NSMutableArray *removedVegitarianToppings;
+
 
 @end
 @implementation RandomPizzaGeneratortGeneratorBrain
@@ -59,6 +62,21 @@
     return _toppingsPool;
 }
 
+-(NSMutableArray *)removedVeganToppings
+{
+    if (!_removedVeganToppings) {
+        _removedVeganToppings = [[NSMutableArray alloc]init];
+    }
+    return _removedVeganToppings;
+}
+-(NSMutableArray *)removedVegitarianToppings
+{
+    if (!_removedVegitarianToppings)
+    {
+        _removedVegitarianToppings = [[NSMutableArray alloc]init];
+    }
+    return _removedVegitarianToppings;
+}
 //The main generate loop. Returns an array of randomly chosen toppings. Take a desired number of toppings.
 -(NSArray *)generateWithNumberOfToppings:(int)number
 {
@@ -121,6 +139,83 @@
     return [temp copy];
     
 }
+-(void)removeVeganTopppings
+{
+    NSMutableDictionary *mutableToppingsPool = [self.toppingsPool mutableCopy];
+    for (NSString *key in self.toppingsPool)
+    {
+        if (![[self.toppingsPool objectForKey:key] vegan])
+        {
+            [mutableToppingsPool removeObjectForKey:key];
+            [[self.toppingsPool objectForKey:key] setWasChecked:YES];
+        }
+    }
+    self.toppingsPool = [mutableToppingsPool copy];
+    
+}
 
+-(void)removeVegitarianToppings
+{
+    NSMutableDictionary *mutableToppingsPool = [self.toppingsPool mutableCopy];
+    for (NSString *key in self.toppingsPool) {
+        if (![[self.toppingsPool objectForKey:key] vegitarian])
+        {
+            [mutableToppingsPool removeObjectForKey:key];
+            [[self.toppingsPool objectForKey:key] setWasChecked:YES];
+        }
+    }
+    self.toppingsPool = [mutableToppingsPool copy];
+}
+
+-(void)enableVeganToppings
+
+{
+    NSMutableDictionary *mutableToppingsPool = [self.toppingsPool mutableCopy];
+    for (Topping *topping  in self.removedVeganToppings)
+    {
+        [mutableToppingsPool setObject:topping forKey:topping.name];
+        
+    }
+    self.toppingsPool = [mutableToppingsPool copy];
+    
+}
+
+-(void)enableVegitarianToppings
+{
+    NSMutableDictionary *mutableToppingsPool = [self.toppingsPool mutableCopy];
+    
+    for (Topping *topping in self.removedVegitarianToppings)
+    {
+        [mutableToppingsPool setObject:topping forKey:topping.name];
+        
+    }
+    self.toppingsPool = [mutableToppingsPool copy];
+    
+}
+
+-(void)updateForVeganChanged
+{
+    if (self.userVegan)
+    {
+        [self removeVeganTopppings];
+    }
+    else
+    {
+        [self enableVeganToppings];
+    }
+        
+}
+
+-(void)updateForVegChanged
+{
+    if (self.userVegitarian)
+    {
+        [self removeVegitarianToppings];
+    }
+    else
+    {
+        [self enableVegitarianToppings]; 
+    }
+}
 
 @end
