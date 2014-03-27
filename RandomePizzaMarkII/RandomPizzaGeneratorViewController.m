@@ -149,7 +149,8 @@
 - (IBAction)veganSwitchChanged
 {
     self.brain.userVegan = self.veganSwitch.on;
-    if (self.veganSwitch.on) {
+    if (self.veganSwitch.on)
+    {
         [self.vegitarianSwitch setOn:YES];
         self.vegitarianSwitch.enabled = NO;
     }
@@ -158,7 +159,7 @@
         self.vegitarianSwitch.enabled = YES;
     }
     [self.brain updateForVeganChanged];
-    [self sliderChanged:nil]; 
+    [self sliderChanged:nil];
     [self.brain saveState];
     
 

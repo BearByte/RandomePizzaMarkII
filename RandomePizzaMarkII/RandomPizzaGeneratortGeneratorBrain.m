@@ -77,6 +77,7 @@
     }
     return _removedVegitarianToppings;
 }
+
 //The main generate loop. Returns an array of randomly chosen toppings. Take a desired number of toppings.
 -(NSArray *)generateWithNumberOfToppings:(int)number
 {
@@ -146,8 +147,20 @@
     {
         if (![[self.toppingsPool objectForKey:key] vegan])
         {
+            Topping *topping = [mutableToppingsPool objectForKey:key];
+            if (topping.vegitarian)
+            {
+                [self.removedVeganToppings addObject:topping];
+            }
+            else
+            {
+                [self.removedVeganToppings addObject:topping];
+            }
+            
             [mutableToppingsPool removeObjectForKey:key];
             [[self.toppingsPool objectForKey:key] setWasChecked:YES];
+            
+        
         }
     }
     self.toppingsPool = [mutableToppingsPool copy];
@@ -156,12 +169,16 @@
 
 -(void)removeVegitarianToppings
 {
+
     NSMutableDictionary *mutableToppingsPool = [self.toppingsPool mutableCopy];
     for (NSString *key in self.toppingsPool) {
         if (![[self.toppingsPool objectForKey:key] vegitarian])
         {
+            
             [mutableToppingsPool removeObjectForKey:key];
             [[self.toppingsPool objectForKey:key] setWasChecked:YES];
+            [self.removedVegitarianToppings addObject:[self.toppingsPool objectForKey:key]];
+            
         }
     }
     self.toppingsPool = [mutableToppingsPool copy];
@@ -182,6 +199,8 @@
 
 -(void)enableVegitarianToppings
 {
+    NSLog(@"ReEnabling Vegitarian toppings...");
+
     NSMutableDictionary *mutableToppingsPool = [self.toppingsPool mutableCopy];
     
     for (Topping *topping in self.removedVegitarianToppings)

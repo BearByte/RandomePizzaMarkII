@@ -141,7 +141,6 @@
     Topping *toppingAtIndex = self.brain.toppings[indexPath.row];
    
     
-    NSLog(@"%@",toppingAtIndex.name);
     if ([self.currentlySelectedToppings objectForKey:toppingAtIndex.name])
     {
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
@@ -231,7 +230,6 @@
                 [self.disabledVegan addObject:cell];
             }
         }
-        
     }
 }
 
