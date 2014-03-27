@@ -194,7 +194,7 @@
         
     }
     self.toppingsPool = [mutableToppingsPool copy];
-    
+    self.removedVeganToppings = [[NSMutableArray alloc]init];
 }
 
 -(void)enableVegitarianToppings
@@ -209,6 +209,8 @@
         
     }
     self.toppingsPool = [mutableToppingsPool copy];
+    self.removedVegitarianToppings = [[NSMutableArray alloc]init];
+    
     
 }
 
