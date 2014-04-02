@@ -27,7 +27,7 @@
                                     <action selector="generatePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="q6K-Dy-1Le"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-on-xBO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainPizza.png" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-on-xBO">
                                 <rect key="frame" x="45" y="119" width="225" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -89,6 +89,7 @@
                     <navigationItem key="navigationItem" title="Random Pizza Generator" id="HmD-sy-sVJ"/>
                     <connections>
                         <outlet property="numberOfToppingsLabel" destination="XHH-gB-XTB" id="Ymo-8z-mYP"/>
+                        <outlet property="pizzaView" destination="ibP-on-xBO" id="K38-7j-7cD"/>
                         <outlet property="slider" destination="H9h-Vo-JhZ" id="I2c-Tp-UkS"/>
                         <outlet property="veganSwitch" destination="MRt-Dg-b81" id="k6o-Of-ip4"/>
                         <outlet property="vegitarianSwitch" destination="apm-c4-hnf" id="YjL-W7-KTZ"/>
@@ -152,6 +153,9 @@
             <point key="canvasLocation" x="357" y="86"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MainPizza.png" width="700" height="700"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -87,7 +87,8 @@
     NSMutableArray *keys = [[temp allKeys] mutableCopy];
     
     
-    for (int i = 0; i<number; i++) {
+    for (int i = 0; i<number; i++)
+    {
         int random = 1.*rand()/RAND_MAX * [keys count]; //choose a random index
         [chosen addObject:[temp objectForKey:[keys objectAtIndex:random]]]; //add it to the chosen array
         [keys removeObjectAtIndex:random]; //remove the topping from the temprary array so it will not be chosen again
@@ -100,15 +101,15 @@
 {
     
     //Create the toppings list
-    Topping *cheese = [[Topping alloc]initWithName:@"Cheese" andVegitarian:YES andVegan:NO];
-    Topping *chicken = [[Topping alloc]initWithName:@"Chicken" andVegitarian:NO andVegan:NO];
-    Topping *olives = [[Topping alloc]initWithName:@"Olives" andVegitarian:YES andVegan:YES];
-    Topping *bacon = [[Topping alloc]initWithName:@"Bacon" andVegitarian:NO andVegan:NO];
-    Topping *pineapple = [[Topping alloc]initWithName:@"Pineapple" andVegitarian:YES andVegan:YES];
-    Topping *sausage = [[Topping alloc]initWithName:@"Sausage" andVegitarian:NO andVegan:NO];
-    Topping *jalapeno = [[Topping alloc] initWithName:@"Jalapano" andVegitarian:YES andVegan:YES];
-    Topping *anchovies = [[Topping alloc]initWithName:@"Anchovies" andVegitarian:NO andVegan:NO];
-    Topping *pepperoni = [[Topping alloc]initWithName:@"Pepperoni" andVegitarian:NO andVegan:NO];
+    Topping *cheese = [[Topping alloc]initWithName:@"Cheese" andVegitarian:YES andVegan:NO andImageName:@"Cheese.png"];
+    Topping *chicken = [[Topping alloc]initWithName:@"Chicken" andVegitarian:NO andVegan:NO andImageName:@"Chicken.png"];
+    Topping *olives = [[Topping alloc]initWithName:@"Olives" andVegitarian:YES andVegan:YES andImageName:@"Olives.png"];
+    Topping *bacon = [[Topping alloc]initWithName:@"Bacon" andVegitarian:NO andVegan:NO andImageName:@"Bacon.png"];
+    Topping *pineapple = [[Topping alloc]initWithName:@"Pineapple" andVegitarian:YES andVegan:YES andImageName:@"Pineapple.png"];
+    Topping *sausage = [[Topping alloc]initWithName:@"Sausage" andVegitarian:NO andVegan:NO andImageName:@"Sausage.png"];
+    Topping *jalapeno = [[Topping alloc] initWithName:@"Jalapano" andVegitarian:YES andVegan:YES andImageName:@"Jalp.png"];
+    Topping *anchovies = [[Topping alloc]initWithName:@"Anchovies" andVegitarian:NO andVegan:NO andImageName:@"Anchovies.png"];
+    Topping *pepperoni = [[Topping alloc]initWithName:@"Pepperoni" andVegitarian:NO andVegan:NO andImageName:@"roni.png"];
     
     
     

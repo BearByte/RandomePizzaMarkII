@@ -15,6 +15,7 @@
 @property (nonatomic) BOOL vegan; //vegan?
 @property (nonatomic) BOOL enabled; //is this topping enabled
 @property (nonatomic) BOOL wasChecked; //was this topping enabled before a switch was changed
+@property (nonatomic, strong) NSString *image; 
 
--(instancetype)initWithName:(NSString *)name andVegitarian:(BOOL)vegitarian andVegan:(BOOL)vegan; 
+-(instancetype)initWithName:(NSString *)name andVegitarian:(BOOL)vegitarian andVegan:(BOOL)vegan andImageName:(NSString *)imageName;
 @end

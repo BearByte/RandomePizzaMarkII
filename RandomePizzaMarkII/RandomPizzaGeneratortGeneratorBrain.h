@@ -20,7 +20,6 @@
 
 -(NSArray *)generateWithNumberOfToppings:(int)number;
 -(void)saveState;
--(void)updateEnabledToppings;
 -(void)updateForVegChanged;
 -(void)updateForVeganChanged;
 

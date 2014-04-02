@@ -17,6 +17,9 @@
 @property(nonatomic,strong) NSNumber* numberOfToppings; //an NSNumber that contains the desired number of toppings for the pizza
 @property (weak, nonatomic) IBOutlet UILabel *numberOfToppingsLabel; //the outlet for the number of toppings display label
 
+@property (weak, nonatomic) IBOutlet UIImageView *pizzaView;
+
+@property (nonatomic, strong) NSArray *pizzaLayers; //A list of all the toppings subviews of the pizza pictures
 @end
 
 @implementation RandomPizzaGeneratorViewController
@@ -42,6 +45,8 @@
     [self sliderChanged:nil];
     
 }
+
+
 
 -(void)setUpScreen
 {
@@ -76,6 +81,13 @@
     return _brain;
 }
 
+- (NSArray *)pizzaLayers
+{
+    if (!_pizzaLayers) {
+        _pizzaLayers = [[NSArray alloc]init];
+    }
+    return _pizzaLayers;
+}
 
 - (IBAction)generatePressed:(id)sender
 {
@@ -89,6 +101,8 @@
     
         NSArray *result = [self.brain generateWithNumberOfToppings:[self.numberOfToppings intValue]];
         [self displayToppings:result];
+        [self resetPizzaPicture];
+        self.pizzaLayers = [self createPizzaImage:result];
     }
 }
 - (IBAction)sliderChanged:(id)sender
@@ -166,6 +180,29 @@
 }
 
 
+-(NSArray *)createPizzaImage:(NSArray *)toppings
+{
+   
+    NSMutableArray *toppingViews = [[NSMutableArray alloc]init];
+    
+    for (Topping *topping in toppings)
+    {
+        
+        UIImageView *pizzaLayer = [[UIImageView alloc]initWithImage:[UIImage imageNamed:topping.image]];
+        [toppingViews addObject:pizzaLayer];
+        [self.pizzaView addSubview:pizzaLayer];
+        
+    }
+    
+    return [toppingViews copy];
+}
+-(void)resetPizzaPicture
+{
+    for (UIImageView *layer in self.pizzaLayers) {
+        [layer removeFromSuperview];
+    }
+    
+}
 - (IBAction)testMethod
 {
 
