@@ -1,4 +1,5 @@
-Functional Spec:
+#Functional Specification for the Random Pizza Generator
+========================================================
  
 
 This will and iOS application is for Company 77 mobile LLC. The idea behind this application is that it will randomly choose pizza toppings to make the arduous process of choosing a pizza less difficult.  
@@ -15,3 +16,41 @@ _Figure 1.1 The Home Screen_
 _Figure 1.2 The Topping Selection Screen_
 
 
+
+
+###The Final Product Will Have the Following Toppings
+=====================================================
+
+* Cheese 
+* Chicken 
+* Olives
+* Bacon
+* Pineapple
+* Sausage 
+* Jalapanos
+* Anchovies
+* Pepperoni
+* Vegan Cheese
+* Mushrooms
+* Mozzarella
+* Tomatoes
+* Canadian Bacon 
+* Hamburgers
+* Onions
+* Buffalo 
+* Broccoli
+* Red peppers
+* Ham
+* Spinach
+* Carnitas
+* Arugula
+* Pesto
+* Feta Cheese
+* Eggplant
+* Meatballs
+* Smoked Pulled Chicken
+* Marinated Shaved Steak
+* Artichoke Hearts
+* Gorgonzola Cheese
+* Kalamata Olives 
+* Mac and Cheese
