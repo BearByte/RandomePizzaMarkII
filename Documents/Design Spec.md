@@ -2,7 +2,7 @@
 
 
 ##Introduction
-============
+==============
 
 The **Random Pizza Generator** is an iPhone app that will help the user make the ever so difficult choice of choosing toppings for their delicious Italian treat. **The Random Pizza Generator** is written entirely in Objective C and should only be edited using the xcode SDK.
 
@@ -54,7 +54,7 @@ Objects are stored as toppings objects: a subclass of NSObject. The data about e
 
 ###Test Flight
 
-I will use test flight to send my app to friends to make sure there are bugs. Testflight makes it easy for others to use an app in beta before it is released. 
+I will use test flight to send my app to friends to make sure there aren't any bugs. Testflight makes it easy for others to use an app in beta before it is released. 
 
 ###Apple 
 
@@ -69,7 +69,3 @@ Apple makes deployment very easy. The only way to release an iPhone app is on th
 =============
 
 Again Apple make this easy. There is a bug report button on the app store. This will send me an email an email whenever a user finds an bug in the program. 
-
-
-
-

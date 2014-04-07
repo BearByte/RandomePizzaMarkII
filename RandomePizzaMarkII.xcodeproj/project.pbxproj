@@ -31,6 +31,7 @@
 		EC493FAC18E9DDFF00EF8EE6 /* roni.png in Resources */ = {isa = PBXBuildFile; fileRef = EC493F9618E9DDFF00EF8EE6 /* roni.png */; };
 		EC493FAD18E9DDFF00EF8EE6 /* Sausage.png in Resources */ = {isa = PBXBuildFile; fileRef = EC493F9718E9DDFF00EF8EE6 /* Sausage.png */; };
 		EC493FAE18E9DDFF00EF8EE6 /* Shrroms.png in Resources */ = {isa = PBXBuildFile; fileRef = EC493F9818E9DDFF00EF8EE6 /* Shrroms.png */; };
+		EC72585A18F31BEE0099A27A /* Cheese.png in Resources */ = {isa = PBXBuildFile; fileRef = EC72585918F31BEE0099A27A /* Cheese.png */; };
 		EC83F24F1896DFE900626A9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F24E1896DFE900626A9B /* Foundation.framework */; };
 		EC83F2511896DFE900626A9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F2501896DFE900626A9B /* CoreGraphics.framework */; };
 		EC83F2531896DFE900626A9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F2521896DFE900626A9B /* UIKit.framework */; };
@@ -86,6 +87,7 @@
 		EC493F9618E9DDFF00EF8EE6 /* roni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roni.png; sourceTree = "<group>"; };
 		EC493F9718E9DDFF00EF8EE6 /* Sausage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sausage.png; sourceTree = "<group>"; };
 		EC493F9818E9DDFF00EF8EE6 /* Shrroms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shrroms.png; sourceTree = "<group>"; };
+		EC72585918F31BEE0099A27A /* Cheese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cheese.png; sourceTree = "<group>"; };
 		EC83F24B1896DFE800626A9B /* RandomePizzaMarkII.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomePizzaMarkII.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC83F24E1896DFE900626A9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC83F2501896DFE900626A9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,6 +139,7 @@
 				EC493F8118E9DDFF00EF8EE6 /* Anchovies.png */,
 				EC493F8218E9DDFF00EF8EE6 /* Bacon.png */,
 				EC493F8318E9DDFF00EF8EE6 /* Chicken.png */,
+				EC72585918F31BEE0099A27A /* Cheese.png */,
 				EC493F8418E9DDFF00EF8EE6 /* Ilustrator */,
 				EC493F8A18E9DDFF00EF8EE6 /* Jalp.png */,
 				EC493F8B18E9DDFF00EF8EE6 /* MainPizza.png */,
@@ -343,6 +346,7 @@
 				EC493F9B18E9DDFF00EF8EE6 /* Chicken.png in Resources */,
 				EC493FAE18E9DDFF00EF8EE6 /* Shrroms.png in Resources */,
 				EC493F9A18E9DDFF00EF8EE6 /* Bacon.png in Resources */,
+				EC72585A18F31BEE0099A27A /* Cheese.png in Resources */,
 				EC493F9D18E9DDFF00EF8EE6 /* Bacon.ai in Resources */,
 				EC493F9E18E9DDFF00EF8EE6 /* Jalp.ai in Resources */,
 				EC493FAD18E9DDFF00EF8EE6 /* Sausage.png in Resources */,

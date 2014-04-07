@@ -187,10 +187,22 @@
     
     for (Topping *topping in toppings)
     {
+        if ([topping.name  isEqualToString:@"Cheese"] ) {
+            UIImageView *cheeseImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:topping.image]];
+            [self.pizzaView addSubview:cheeseImage];
+            [toppingViews addObject:cheeseImage]; 
+        }
+    }
+    
+    for (Topping *topping in toppings)
+    {
+        if (![topping.name isEqualToString:@"Cheese"])
+        {
         
-        UIImageView *pizzaLayer = [[UIImageView alloc]initWithImage:[UIImage imageNamed:topping.image]];
-        [toppingViews addObject:pizzaLayer];
-        [self.pizzaView addSubview:pizzaLayer];
+            UIImageView *pizzaLayer = [[UIImageView alloc]initWithImage:[UIImage imageNamed:topping.image]];
+            [toppingViews addObject:pizzaLayer];
+            [self.pizzaView addSubview:pizzaLayer];
+        }
         
     }
     
