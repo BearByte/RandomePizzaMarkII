@@ -110,10 +110,18 @@
     Topping *jalapeno = [[Topping alloc] initWithName:@"Jalapano" andVegitarian:YES andVegan:YES andImageName:@"Jalp.png"];
     Topping *anchovies = [[Topping alloc]initWithName:@"Anchovies" andVegitarian:NO andVegan:NO andImageName:@"Anchovies.png"];
     Topping *pepperoni = [[Topping alloc]initWithName:@"Pepperoni" andVegitarian:NO andVegan:NO andImageName:@"roni.png"];
+    Topping *shrooms = [[Topping alloc]initWithName:@"Mushrooms" andVegitarian:YES andVegan:YES andImageName:@"Shrroms.png"];
+    Topping *arugula =[[Topping alloc]initWithName:@"Aruglua" andVegitarian:YES andVegan:YES andImageName:@"Arug.png"];
+    Topping *canadianBacon = [[Topping alloc]initWithName:@"Canadian Bacon" andVegitarian:NO andVegan:NO andImageName:@"CaBacon.png"];
+    Topping *eggPlant = [[Topping alloc] initWithName:@"Eggplant" andVegitarian:YES andVegan:YES andImageName:@"Eggplant.png"];
+    Topping *burgers = [[Topping alloc]initWithName:@"Hamburger" andVegitarian:NO andVegan:NO andImageName:@"Hamburger.png"];
+    Topping *onion = [[Topping alloc]initWithName:@"Onions" andVegitarian:YES andVegan:YES andImageName:@"Onion.png"];
+    Topping *redPeppers = [[Topping alloc]initWithName:@"Red Peppers" andVegitarian:YES andVegan:YES andImageName:@"RedPeppers.png"];
+    Topping *spinich = [[Topping alloc]initWithName:@"Spinich" andVegitarian:YES andVegan:YES andImageName:@"Spinich.png"]; 
     
     
     
-    return @[cheese,chicken,olives,bacon,pineapple, sausage, jalapeno, anchovies, pepperoni];
+    return @[cheese,chicken,olives,bacon,pineapple, sausage, jalapeno, anchovies, pepperoni, shrooms,arugula,canadianBacon];
 }
 -(void)saveState
 {

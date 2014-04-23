@@ -48,8 +48,7 @@ _Figure 1.2 The Topping Selection Screen_
 * Feta Cheese
 * Eggplant
 * Meatballs
-* Smoked Pulled Chicken
-* Marinated Shaved Steak
+* Steak
 * Artichoke Hearts
 * Gorgonzola Cheese
 * Kalamata Olives 
