@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8lx-Cc-3Sz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8lx-Cc-3Sz">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainPizza.png" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-on-xBO">
-                                <rect key="frame" x="45" y="119" width="225" height="225"/>
+                                <rect key="frame" x="48" y="113" width="225" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsR-Jy-tB0">
@@ -83,14 +83,34 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k9z-OL-1iG">
+                                <rect key="frame" x="79" y="144" width="163" height="163"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Random Pizza Generator" id="HmD-sy-sVJ"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Random Pizza Generator" id="HmD-sy-sVJ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="vfh-VU-CHT">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="dEY-qa-h7f">
+                                <rect key="frame" x="282" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cKN-Pd-P7k" kind="push" id="sIW-5U-t4v"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="numberOfToppingsLabel" destination="XHH-gB-XTB" id="Ymo-8z-mYP"/>
                         <outlet property="pizzaView" destination="ibP-on-xBO" id="K38-7j-7cD"/>
                         <outlet property="slider" destination="H9h-Vo-JhZ" id="I2c-Tp-UkS"/>
+                        <outlet property="toppingView" destination="k9z-OL-1iG" id="Ure-Ma-MKK"/>
                         <outlet property="veganSwitch" destination="MRt-Dg-b81" id="k6o-Of-ip4"/>
                         <outlet property="vegitarianSwitch" destination="apm-c4-hnf" id="YjL-W7-KTZ"/>
                     </connections>
@@ -98,6 +118,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="773" y="86"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bX1-NL-5BP">
+            <objects>
+                <viewController id="cKN-Pd-P7k" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KBe-KD-Osk"/>
+                        <viewControllerLayoutGuide type="bottom" id="GaJ-ju-g2z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VHu-VX-CzX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="company77.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Le4-pj-OCi">
+                                <rect key="frame" x="65" y="108" width="190" height="190"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Created by: James Owens         " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxJ-ks-pz6">
+                                <rect key="frame" x="81" y="338" width="181" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="F4y-mZ-kuK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09J-cZ-B11" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260" y="-223"/>
         </scene>
         <!--Random Pizza Generator Topping View Controller - Toppings-->
         <scene sceneID="aOO-98-Kih">
@@ -123,7 +175,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Toppings" id="b8e-DL-fld">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="ZUB-Zs-22o">
+                        <barButtonItem key="rightBarButtonItem" title="Select All " id="ZUB-Zs-22o">
                             <connections>
                                 <action selector="testButtonPressed:" destination="RKl-Qs-GtD" id="V11-X8-vWa"/>
                             </connections>
@@ -132,7 +184,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWZ-Ok-tYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1232" y="86"/>
+            <point key="canvasLocation" x="1260" y="482"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LhA-Mp-9DO">
@@ -155,6 +207,7 @@
     </scenes>
     <resources>
         <image name="MainPizza.png" width="700" height="700"/>
+        <image name="company77.jpeg" width="256" height="256"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

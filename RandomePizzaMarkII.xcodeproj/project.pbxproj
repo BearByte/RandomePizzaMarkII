@@ -11,27 +11,43 @@
 		EC2C0681189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2C0680189AD6A40052B043 /* RandomPizzaGeneratorToppingViewController.m */; };
 		EC2C0687189ADC980052B043 /* Topping.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2C0686189ADC980052B043 /* Topping.m */; };
 		EC384C0018BD01E600CE2245 /* RandomPizzaGeneratorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC384BFF18BD01E600CE2245 /* RandomPizzaGeneratorCell.m */; };
-		EC493F9918E9DDFF00EF8EE6 /* Anchovies.png in Resources */ = {isa = PBXBuildFile; fileRef = EC493F8118E9DDFF00EF8EE6 /* Anchovies.png */; };
-		EC493F9A18E9DDFF00EF8EE6 /* Bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = EC493F8218E9DDFF00EF8EE6 /* Bacon.png */; };
-		EC493F9B18E9DDFF00EF8EE6 /* Chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = EC493F8318E9DDFF00EF8EE6 /* Chicken.png */; };
-		EC493F9C18E9DDFF00EF8EE6 /* Anchovies.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC493F8518E9DDFF00EF8EE6 /* Anchovies.ai */; };
-		EC493F9D18E9DDFF00EF8EE6 /* Bacon.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC493F8618E9DDFF00EF8EE6 /* Bacon.ai */; };
-		EC493F9E18E9DDFF00EF8EE6 /* Jalp.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC493F8718E9DDFF00EF8EE6 /* Jalp.ai */; };
-		EC493F9F18E9DDFF00EF8EE6 /* Olives.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC493F8818E9DDFF00EF8EE6 /* Olives.ai */; };
-		EC493FA018E9DDFF00EF8EE6 /* Sasuage.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC493F8918E9DDFF00EF8EE6 /* Sasuage.ai */; };
-		EC493FA118E9DDFF00EF8EE6 /* Jalp.png in Resources */ = {isa = PBXBuildFile; fileRef = EC493F8A18E9DDFF00EF8EE6 /* Jalp.png */; };
-		EC493FA218E9DDFF00EF8EE6 /* MainPizza.png in Resources */ = {isa = PBXBuildFile; fileRef = EC493F8B18E9DDFF00EF8EE6 /* MainPizza.png */; };
-		EC493FA418E9DDFF00EF8EE6 /* Olives.png in Resources */ = {isa = PBXBuildFile; fileRef = EC493F8D18E9DDFF00EF8EE6 /* Olives.png */; };
-		EC493FA518E9DDFF00EF8EE6 /* Pineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = EC493F8E18E9DDFF00EF8EE6 /* Pineapple.png */; };
-		EC493FA718E9DDFF00EF8EE6 /* Chicken.psd in Resources */ = {isa = PBXBuildFile; fileRef = EC493F9118E9DDFF00EF8EE6 /* Chicken.psd */; };
-		EC493FA818E9DDFF00EF8EE6 /* MainPizza.psd in Resources */ = {isa = PBXBuildFile; fileRef = EC493F9218E9DDFF00EF8EE6 /* MainPizza.psd */; };
-		EC493FA918E9DDFF00EF8EE6 /* Pineapple.psd in Resources */ = {isa = PBXBuildFile; fileRef = EC493F9318E9DDFF00EF8EE6 /* Pineapple.psd */; };
-		EC493FAA18E9DDFF00EF8EE6 /* Shrroms.psd in Resources */ = {isa = PBXBuildFile; fileRef = EC493F9418E9DDFF00EF8EE6 /* Shrroms.psd */; };
-		EC493FAB18E9DDFF00EF8EE6 /* Toppings Template.psd in Resources */ = {isa = PBXBuildFile; fileRef = EC493F9518E9DDFF00EF8EE6 /* Toppings Template.psd */; };
-		EC493FAC18E9DDFF00EF8EE6 /* roni.png in Resources */ = {isa = PBXBuildFile; fileRef = EC493F9618E9DDFF00EF8EE6 /* roni.png */; };
-		EC493FAD18E9DDFF00EF8EE6 /* Sausage.png in Resources */ = {isa = PBXBuildFile; fileRef = EC493F9718E9DDFF00EF8EE6 /* Sausage.png */; };
-		EC493FAE18E9DDFF00EF8EE6 /* Shrroms.png in Resources */ = {isa = PBXBuildFile; fileRef = EC493F9818E9DDFF00EF8EE6 /* Shrroms.png */; };
-		EC72585A18F31BEE0099A27A /* Cheese.png in Resources */ = {isa = PBXBuildFile; fileRef = EC72585918F31BEE0099A27A /* Cheese.png */; };
+		EC7861DC191BF64F002E1ACC /* Anchovies.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861B4191BF64E002E1ACC /* Anchovies.png */; };
+		EC7861DD191BF64F002E1ACC /* Arug.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861B5191BF64E002E1ACC /* Arug.png */; };
+		EC7861DE191BF64F002E1ACC /* Bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861B6191BF64E002E1ACC /* Bacon.png */; };
+		EC7861DF191BF64F002E1ACC /* CaBacon.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861B7191BF64E002E1ACC /* CaBacon.png */; };
+		EC7861E0191BF64F002E1ACC /* Cheese.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861B8191BF64E002E1ACC /* Cheese.png */; };
+		EC7861E1191BF64F002E1ACC /* Chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861B9191BF64E002E1ACC /* Chicken.png */; };
+		EC7861E3191BF64F002E1ACC /* Hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861BB191BF64E002E1ACC /* Hamburger.png */; };
+		EC7861E4191BF64F002E1ACC /* Anchovies.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC7861BD191BF64E002E1ACC /* Anchovies.ai */; };
+		EC7861E5191BF64F002E1ACC /* Arrrrrrugla.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC7861BE191BF64E002E1ACC /* Arrrrrrugla.ai */; };
+		EC7861E6191BF64F002E1ACC /* Bacon.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC7861BF191BF64E002E1ACC /* Bacon.ai */; };
+		EC7861E7191BF64F002E1ACC /* CaBacon.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC7861C0191BF64E002E1ACC /* CaBacon.ai */; };
+		EC7861E8191BF64F002E1ACC /* Eggplant.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC7861C1191BF64E002E1ACC /* Eggplant.ai */; };
+		EC7861E9191BF64F002E1ACC /* Hamburger.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC7861C2191BF64E002E1ACC /* Hamburger.ai */; };
+		EC7861EA191BF64F002E1ACC /* Jalp.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC7861C3191BF64E002E1ACC /* Jalp.ai */; };
+		EC7861EB191BF64F002E1ACC /* Olives.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC7861C4191BF64E002E1ACC /* Olives.ai */; };
+		EC7861EC191BF64F002E1ACC /* Onions.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC7861C5191BF64E002E1ACC /* Onions.ai */; };
+		EC7861ED191BF64F002E1ACC /* Red_Peppers.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC7861C6191BF64E002E1ACC /* Red_Peppers.ai */; };
+		EC7861EE191BF64F002E1ACC /* Sasuage.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC7861C7191BF64E002E1ACC /* Sasuage.ai */; };
+		EC7861EF191BF64F002E1ACC /* Spinich.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC7861C8191BF64E002E1ACC /* Spinich.ai */; };
+		EC7861F0191BF64F002E1ACC /* Tomato.ai in Resources */ = {isa = PBXBuildFile; fileRef = EC7861C9191BF64E002E1ACC /* Tomato.ai */; };
+		EC7861F1191BF64F002E1ACC /* Jalp.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861CA191BF64E002E1ACC /* Jalp.png */; };
+		EC7861F2191BF64F002E1ACC /* MainPizza.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861CB191BF64E002E1ACC /* MainPizza.png */; };
+		EC7861F3191BF64F002E1ACC /* Olives.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861CC191BF64E002E1ACC /* Olives.png */; };
+		EC7861F4191BF64F002E1ACC /* Onion.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861CD191BF64E002E1ACC /* Onion.png */; };
+		EC7861F5191BF64F002E1ACC /* Pineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861CE191BF64E002E1ACC /* Pineapple.png */; };
+		EC7861F6191BF64F002E1ACC /* Cheese.psd in Resources */ = {isa = PBXBuildFile; fileRef = EC7861D0191BF64F002E1ACC /* Cheese.psd */; };
+		EC7861F7191BF64F002E1ACC /* Chicken.psd in Resources */ = {isa = PBXBuildFile; fileRef = EC7861D1191BF64F002E1ACC /* Chicken.psd */; };
+		EC7861F8191BF64F002E1ACC /* MainPizza.psd in Resources */ = {isa = PBXBuildFile; fileRef = EC7861D2191BF64F002E1ACC /* MainPizza.psd */; };
+		EC7861F9191BF64F002E1ACC /* Pineapple.psd in Resources */ = {isa = PBXBuildFile; fileRef = EC7861D3191BF64F002E1ACC /* Pineapple.psd */; };
+		EC7861FA191BF64F002E1ACC /* Shrroms.psd in Resources */ = {isa = PBXBuildFile; fileRef = EC7861D4191BF64F002E1ACC /* Shrroms.psd */; };
+		EC7861FB191BF64F002E1ACC /* Toppings Template.psd in Resources */ = {isa = PBXBuildFile; fileRef = EC7861D5191BF64F002E1ACC /* Toppings Template.psd */; };
+		EC7861FC191BF64F002E1ACC /* RedPeppers.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861D6191BF64F002E1ACC /* RedPeppers.png */; };
+		EC7861FD191BF64F002E1ACC /* roni.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861D7191BF64F002E1ACC /* roni.png */; };
+		EC7861FE191BF64F002E1ACC /* Sausage.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861D8191BF64F002E1ACC /* Sausage.png */; };
+		EC7861FF191BF64F002E1ACC /* Shrroms.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861D9191BF64F002E1ACC /* Shrroms.png */; };
+		EC786200191BF64F002E1ACC /* Spinich.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861DA191BF64F002E1ACC /* Spinich.png */; };
+		EC786201191BF64F002E1ACC /* Tomato.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7861DB191BF64F002E1ACC /* Tomato.png */; };
 		EC83F24F1896DFE900626A9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F24E1896DFE900626A9B /* Foundation.framework */; };
 		EC83F2511896DFE900626A9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F2501896DFE900626A9B /* CoreGraphics.framework */; };
 		EC83F2531896DFE900626A9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F2521896DFE900626A9B /* UIKit.framework */; };
@@ -46,6 +62,8 @@
 		EC83F2701896DFE900626A9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC83F2521896DFE900626A9B /* UIKit.framework */; };
 		EC83F2781896DFE900626A9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC83F2761896DFE900626A9B /* InfoPlist.strings */; };
 		EC83F27A1896DFE900626A9B /* RandomePizzaMarkIITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC83F2791896DFE900626A9B /* RandomePizzaMarkIITests.m */; };
+		ECF2AFC719213E96001E8E38 /* company77.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = ECF2AFC619213E96001E8E38 /* company77.jpeg */; };
+		ECF2AFC919228E8E001E8E38 /* Eggplant.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF2AFC819228E8E001E8E38 /* Eggplant.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,27 +85,44 @@
 		EC2C0686189ADC980052B043 /* Topping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Topping.m; sourceTree = "<group>"; };
 		EC384BFE18BD01E600CE2245 /* RandomPizzaGeneratorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomPizzaGeneratorCell.h; sourceTree = "<group>"; };
 		EC384BFF18BD01E600CE2245 /* RandomPizzaGeneratorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomPizzaGeneratorCell.m; sourceTree = "<group>"; };
-		EC493F8118E9DDFF00EF8EE6 /* Anchovies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Anchovies.png; sourceTree = "<group>"; };
-		EC493F8218E9DDFF00EF8EE6 /* Bacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bacon.png; sourceTree = "<group>"; };
-		EC493F8318E9DDFF00EF8EE6 /* Chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chicken.png; sourceTree = "<group>"; };
-		EC493F8518E9DDFF00EF8EE6 /* Anchovies.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Anchovies.ai; sourceTree = "<group>"; };
-		EC493F8618E9DDFF00EF8EE6 /* Bacon.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Bacon.ai; sourceTree = "<group>"; };
-		EC493F8718E9DDFF00EF8EE6 /* Jalp.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jalp.ai; sourceTree = "<group>"; };
-		EC493F8818E9DDFF00EF8EE6 /* Olives.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Olives.ai; sourceTree = "<group>"; };
-		EC493F8918E9DDFF00EF8EE6 /* Sasuage.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sasuage.ai; sourceTree = "<group>"; };
-		EC493F8A18E9DDFF00EF8EE6 /* Jalp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jalp.png; sourceTree = "<group>"; };
-		EC493F8B18E9DDFF00EF8EE6 /* MainPizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainPizza.png; sourceTree = "<group>"; };
-		EC493F8D18E9DDFF00EF8EE6 /* Olives.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Olives.png; sourceTree = "<group>"; };
-		EC493F8E18E9DDFF00EF8EE6 /* Pineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pineapple.png; sourceTree = "<group>"; };
-		EC493F9118E9DDFF00EF8EE6 /* Chicken.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chicken.psd; sourceTree = "<group>"; };
-		EC493F9218E9DDFF00EF8EE6 /* MainPizza.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainPizza.psd; sourceTree = "<group>"; };
-		EC493F9318E9DDFF00EF8EE6 /* Pineapple.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pineapple.psd; sourceTree = "<group>"; };
-		EC493F9418E9DDFF00EF8EE6 /* Shrroms.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Shrroms.psd; sourceTree = "<group>"; };
-		EC493F9518E9DDFF00EF8EE6 /* Toppings Template.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Toppings Template.psd"; sourceTree = "<group>"; };
-		EC493F9618E9DDFF00EF8EE6 /* roni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roni.png; sourceTree = "<group>"; };
-		EC493F9718E9DDFF00EF8EE6 /* Sausage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sausage.png; sourceTree = "<group>"; };
-		EC493F9818E9DDFF00EF8EE6 /* Shrroms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shrroms.png; sourceTree = "<group>"; };
-		EC72585918F31BEE0099A27A /* Cheese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cheese.png; sourceTree = "<group>"; };
+		EC7861B4191BF64E002E1ACC /* Anchovies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Anchovies.png; sourceTree = "<group>"; };
+		EC7861B5191BF64E002E1ACC /* Arug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arug.png; sourceTree = "<group>"; };
+		EC7861B6191BF64E002E1ACC /* Bacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bacon.png; sourceTree = "<group>"; };
+		EC7861B7191BF64E002E1ACC /* CaBacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaBacon.png; sourceTree = "<group>"; };
+		EC7861B8191BF64E002E1ACC /* Cheese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cheese.png; sourceTree = "<group>"; };
+		EC7861B9191BF64E002E1ACC /* Chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chicken.png; sourceTree = "<group>"; };
+		EC7861BA191BF64E002E1ACC /* Eggplant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eggplant.png; sourceTree = "<group>"; };
+		EC7861BB191BF64E002E1ACC /* Hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hamburger.png; sourceTree = "<group>"; };
+		EC7861BD191BF64E002E1ACC /* Anchovies.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Anchovies.ai; sourceTree = "<group>"; };
+		EC7861BE191BF64E002E1ACC /* Arrrrrrugla.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Arrrrrrugla.ai; sourceTree = "<group>"; };
+		EC7861BF191BF64E002E1ACC /* Bacon.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Bacon.ai; sourceTree = "<group>"; };
+		EC7861C0191BF64E002E1ACC /* CaBacon.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CaBacon.ai; sourceTree = "<group>"; };
+		EC7861C1191BF64E002E1ACC /* Eggplant.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Eggplant.ai; sourceTree = "<group>"; };
+		EC7861C2191BF64E002E1ACC /* Hamburger.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Hamburger.ai; sourceTree = "<group>"; };
+		EC7861C3191BF64E002E1ACC /* Jalp.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jalp.ai; sourceTree = "<group>"; };
+		EC7861C4191BF64E002E1ACC /* Olives.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Olives.ai; sourceTree = "<group>"; };
+		EC7861C5191BF64E002E1ACC /* Onions.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Onions.ai; sourceTree = "<group>"; };
+		EC7861C6191BF64E002E1ACC /* Red_Peppers.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Red_Peppers.ai; sourceTree = "<group>"; };
+		EC7861C7191BF64E002E1ACC /* Sasuage.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sasuage.ai; sourceTree = "<group>"; };
+		EC7861C8191BF64E002E1ACC /* Spinich.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Spinich.ai; sourceTree = "<group>"; };
+		EC7861C9191BF64E002E1ACC /* Tomato.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tomato.ai; sourceTree = "<group>"; };
+		EC7861CA191BF64E002E1ACC /* Jalp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jalp.png; sourceTree = "<group>"; };
+		EC7861CB191BF64E002E1ACC /* MainPizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainPizza.png; sourceTree = "<group>"; };
+		EC7861CC191BF64E002E1ACC /* Olives.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Olives.png; sourceTree = "<group>"; };
+		EC7861CD191BF64E002E1ACC /* Onion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Onion.png; sourceTree = "<group>"; };
+		EC7861CE191BF64E002E1ACC /* Pineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pineapple.png; sourceTree = "<group>"; };
+		EC7861D0191BF64F002E1ACC /* Cheese.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cheese.psd; sourceTree = "<group>"; };
+		EC7861D1191BF64F002E1ACC /* Chicken.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chicken.psd; sourceTree = "<group>"; };
+		EC7861D2191BF64F002E1ACC /* MainPizza.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainPizza.psd; sourceTree = "<group>"; };
+		EC7861D3191BF64F002E1ACC /* Pineapple.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pineapple.psd; sourceTree = "<group>"; };
+		EC7861D4191BF64F002E1ACC /* Shrroms.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Shrroms.psd; sourceTree = "<group>"; };
+		EC7861D5191BF64F002E1ACC /* Toppings Template.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Toppings Template.psd"; sourceTree = "<group>"; };
+		EC7861D6191BF64F002E1ACC /* RedPeppers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedPeppers.png; sourceTree = "<group>"; };
+		EC7861D7191BF64F002E1ACC /* roni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roni.png; sourceTree = "<group>"; };
+		EC7861D8191BF64F002E1ACC /* Sausage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sausage.png; sourceTree = "<group>"; };
+		EC7861D9191BF64F002E1ACC /* Shrroms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shrroms.png; sourceTree = "<group>"; };
+		EC7861DA191BF64F002E1ACC /* Spinich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spinich.png; sourceTree = "<group>"; };
+		EC7861DB191BF64F002E1ACC /* Tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tomato.png; sourceTree = "<group>"; };
 		EC83F24B1896DFE800626A9B /* RandomePizzaMarkII.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomePizzaMarkII.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC83F24E1896DFE900626A9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC83F2501896DFE900626A9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -107,6 +142,8 @@
 		EC83F2751896DFE900626A9B /* RandomePizzaMarkIITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RandomePizzaMarkIITests-Info.plist"; sourceTree = "<group>"; };
 		EC83F2771896DFE900626A9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC83F2791896DFE900626A9B /* RandomePizzaMarkIITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomePizzaMarkIITests.m; sourceTree = "<group>"; };
+		ECF2AFC619213E96001E8E38 /* company77.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = company77.jpeg; sourceTree = "<group>"; };
+		ECF2AFC819228E8E001E8E38 /* Eggplant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eggplant.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,46 +170,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EC493F8018E9DDFF00EF8EE6 /* Pizza Graphics */ = {
+		EC7861B3191BF64E002E1ACC /* Pizza Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				EC493F8118E9DDFF00EF8EE6 /* Anchovies.png */,
-				EC493F8218E9DDFF00EF8EE6 /* Bacon.png */,
-				EC493F8318E9DDFF00EF8EE6 /* Chicken.png */,
-				EC72585918F31BEE0099A27A /* Cheese.png */,
-				EC493F8418E9DDFF00EF8EE6 /* Ilustrator */,
-				EC493F8A18E9DDFF00EF8EE6 /* Jalp.png */,
-				EC493F8B18E9DDFF00EF8EE6 /* MainPizza.png */,
-				EC493F8D18E9DDFF00EF8EE6 /* Olives.png */,
-				EC493F8E18E9DDFF00EF8EE6 /* Pineapple.png */,
-				EC493F9018E9DDFF00EF8EE6 /* PSDs */,
-				EC493F9618E9DDFF00EF8EE6 /* roni.png */,
-				EC493F9718E9DDFF00EF8EE6 /* Sausage.png */,
-				EC493F9818E9DDFF00EF8EE6 /* Shrroms.png */,
+				ECF2AFC819228E8E001E8E38 /* Eggplant.png */,
+				ECF2AFC619213E96001E8E38 /* company77.jpeg */,
+				EC7861B4191BF64E002E1ACC /* Anchovies.png */,
+				EC7861B5191BF64E002E1ACC /* Arug.png */,
+				EC7861B6191BF64E002E1ACC /* Bacon.png */,
+				EC7861B7191BF64E002E1ACC /* CaBacon.png */,
+				EC7861B8191BF64E002E1ACC /* Cheese.png */,
+				EC7861B9191BF64E002E1ACC /* Chicken.png */,
+				EC7861BA191BF64E002E1ACC /* Eggplant.png */,
+				EC7861BB191BF64E002E1ACC /* Hamburger.png */,
+				EC7861BC191BF64E002E1ACC /* Ilustrator */,
+				EC7861CA191BF64E002E1ACC /* Jalp.png */,
+				EC7861CB191BF64E002E1ACC /* MainPizza.png */,
+				EC7861CC191BF64E002E1ACC /* Olives.png */,
+				EC7861CD191BF64E002E1ACC /* Onion.png */,
+				EC7861CE191BF64E002E1ACC /* Pineapple.png */,
+				EC7861CF191BF64E002E1ACC /* PSDs */,
+				EC7861D6191BF64F002E1ACC /* RedPeppers.png */,
+				EC7861D7191BF64F002E1ACC /* roni.png */,
+				EC7861D8191BF64F002E1ACC /* Sausage.png */,
+				EC7861D9191BF64F002E1ACC /* Shrroms.png */,
+				EC7861DA191BF64F002E1ACC /* Spinich.png */,
+				EC7861DB191BF64F002E1ACC /* Tomato.png */,
 			);
 			path = "Pizza Graphics";
 			sourceTree = "<group>";
 		};
-		EC493F8418E9DDFF00EF8EE6 /* Ilustrator */ = {
+		EC7861BC191BF64E002E1ACC /* Ilustrator */ = {
 			isa = PBXGroup;
 			children = (
-				EC493F8518E9DDFF00EF8EE6 /* Anchovies.ai */,
-				EC493F8618E9DDFF00EF8EE6 /* Bacon.ai */,
-				EC493F8718E9DDFF00EF8EE6 /* Jalp.ai */,
-				EC493F8818E9DDFF00EF8EE6 /* Olives.ai */,
-				EC493F8918E9DDFF00EF8EE6 /* Sasuage.ai */,
+				EC7861BD191BF64E002E1ACC /* Anchovies.ai */,
+				EC7861BE191BF64E002E1ACC /* Arrrrrrugla.ai */,
+				EC7861BF191BF64E002E1ACC /* Bacon.ai */,
+				EC7861C0191BF64E002E1ACC /* CaBacon.ai */,
+				EC7861C1191BF64E002E1ACC /* Eggplant.ai */,
+				EC7861C2191BF64E002E1ACC /* Hamburger.ai */,
+				EC7861C3191BF64E002E1ACC /* Jalp.ai */,
+				EC7861C4191BF64E002E1ACC /* Olives.ai */,
+				EC7861C5191BF64E002E1ACC /* Onions.ai */,
+				EC7861C6191BF64E002E1ACC /* Red_Peppers.ai */,
+				EC7861C7191BF64E002E1ACC /* Sasuage.ai */,
+				EC7861C8191BF64E002E1ACC /* Spinich.ai */,
+				EC7861C9191BF64E002E1ACC /* Tomato.ai */,
 			);
 			path = Ilustrator;
 			sourceTree = "<group>";
 		};
-		EC493F9018E9DDFF00EF8EE6 /* PSDs */ = {
+		EC7861CF191BF64E002E1ACC /* PSDs */ = {
 			isa = PBXGroup;
 			children = (
-				EC493F9118E9DDFF00EF8EE6 /* Chicken.psd */,
-				EC493F9218E9DDFF00EF8EE6 /* MainPizza.psd */,
-				EC493F9318E9DDFF00EF8EE6 /* Pineapple.psd */,
-				EC493F9418E9DDFF00EF8EE6 /* Shrroms.psd */,
-				EC493F9518E9DDFF00EF8EE6 /* Toppings Template.psd */,
+				EC7861D0191BF64F002E1ACC /* Cheese.psd */,
+				EC7861D1191BF64F002E1ACC /* Chicken.psd */,
+				EC7861D2191BF64F002E1ACC /* MainPizza.psd */,
+				EC7861D3191BF64F002E1ACC /* Pineapple.psd */,
+				EC7861D4191BF64F002E1ACC /* Shrroms.psd */,
+				EC7861D5191BF64F002E1ACC /* Toppings Template.psd */,
 			);
 			path = PSDs;
 			sourceTree = "<group>";
@@ -221,8 +277,8 @@
 				EC2C067D189AD6790052B043 /* RandomPizzaGeneratortGeneratorBrain.m */,
 				EC384BFE18BD01E600CE2245 /* RandomPizzaGeneratorCell.h */,
 				EC384BFF18BD01E600CE2245 /* RandomPizzaGeneratorCell.m */,
-				EC493F8018E9DDFF00EF8EE6 /* Pizza Graphics */,
 				EC83F2661896DFE900626A9B /* Images.xcassets */,
+				EC7861B3191BF64E002E1ACC /* Pizza Graphics */,
 				EC83F2551896DFE900626A9B /* Supporting Files */,
 			);
 			path = RandomePizzaMarkII;
@@ -304,9 +360,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RandomPizzaGenerator;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "James Owens";
 				TargetAttributes = {
+					EC83F24A1896DFE800626A9B = {
+						DevelopmentTeam = 292DCZ6MNQ;
+					};
 					EC83F26B1896DFE900626A9B = {
 						TestTargetID = EC83F24A1896DFE800626A9B;
 					};
@@ -336,30 +395,48 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC493FA518E9DDFF00EF8EE6 /* Pineapple.png in Resources */,
-				EC493FAC18E9DDFF00EF8EE6 /* roni.png in Resources */,
-				EC493F9918E9DDFF00EF8EE6 /* Anchovies.png in Resources */,
-				EC493FAB18E9DDFF00EF8EE6 /* Toppings Template.psd in Resources */,
-				EC493FA918E9DDFF00EF8EE6 /* Pineapple.psd in Resources */,
-				EC493FAA18E9DDFF00EF8EE6 /* Shrroms.psd in Resources */,
+				EC7861EA191BF64F002E1ACC /* Jalp.ai in Resources */,
+				EC7861E7191BF64F002E1ACC /* CaBacon.ai in Resources */,
+				EC7861DC191BF64F002E1ACC /* Anchovies.png in Resources */,
+				EC7861E6191BF64F002E1ACC /* Bacon.ai in Resources */,
+				EC786200191BF64F002E1ACC /* Spinich.png in Resources */,
+				EC7861DE191BF64F002E1ACC /* Bacon.png in Resources */,
+				EC7861EB191BF64F002E1ACC /* Olives.ai in Resources */,
+				EC7861E0191BF64F002E1ACC /* Cheese.png in Resources */,
+				EC7861E8191BF64F002E1ACC /* Eggplant.ai in Resources */,
+				EC7861F7191BF64F002E1ACC /* Chicken.psd in Resources */,
+				EC7861DF191BF64F002E1ACC /* CaBacon.png in Resources */,
+				EC7861FA191BF64F002E1ACC /* Shrroms.psd in Resources */,
+				EC7861EE191BF64F002E1ACC /* Sasuage.ai in Resources */,
+				EC7861EF191BF64F002E1ACC /* Spinich.ai in Resources */,
 				EC83F2671896DFE900626A9B /* Images.xcassets in Resources */,
-				EC493F9B18E9DDFF00EF8EE6 /* Chicken.png in Resources */,
-				EC493FAE18E9DDFF00EF8EE6 /* Shrroms.png in Resources */,
-				EC493F9A18E9DDFF00EF8EE6 /* Bacon.png in Resources */,
-				EC72585A18F31BEE0099A27A /* Cheese.png in Resources */,
-				EC493F9D18E9DDFF00EF8EE6 /* Bacon.ai in Resources */,
-				EC493F9E18E9DDFF00EF8EE6 /* Jalp.ai in Resources */,
-				EC493FAD18E9DDFF00EF8EE6 /* Sausage.png in Resources */,
-				EC493FA118E9DDFF00EF8EE6 /* Jalp.png in Resources */,
+				EC7861F1191BF64F002E1ACC /* Jalp.png in Resources */,
+				EC7861DD191BF64F002E1ACC /* Arug.png in Resources */,
+				ECF2AFC919228E8E001E8E38 /* Eggplant.png in Resources */,
+				ECF2AFC719213E96001E8E38 /* company77.jpeg in Resources */,
+				EC7861EC191BF64F002E1ACC /* Onions.ai in Resources */,
+				EC7861F5191BF64F002E1ACC /* Pineapple.png in Resources */,
+				EC7861FF191BF64F002E1ACC /* Shrroms.png in Resources */,
+				EC7861F2191BF64F002E1ACC /* MainPizza.png in Resources */,
+				EC7861E5191BF64F002E1ACC /* Arrrrrrugla.ai in Resources */,
+				EC7861F6191BF64F002E1ACC /* Cheese.psd in Resources */,
+				EC7861E1191BF64F002E1ACC /* Chicken.png in Resources */,
+				EC7861F8191BF64F002E1ACC /* MainPizza.psd in Resources */,
+				EC7861FC191BF64F002E1ACC /* RedPeppers.png in Resources */,
+				EC7861E3191BF64F002E1ACC /* Hamburger.png in Resources */,
+				EC7861F4191BF64F002E1ACC /* Onion.png in Resources */,
+				EC7861F9191BF64F002E1ACC /* Pineapple.psd in Resources */,
+				EC7861ED191BF64F002E1ACC /* Red_Peppers.ai in Resources */,
+				EC7861E9191BF64F002E1ACC /* Hamburger.ai in Resources */,
+				EC7861F3191BF64F002E1ACC /* Olives.png in Resources */,
+				EC786201191BF64F002E1ACC /* Tomato.png in Resources */,
+				EC7861E4191BF64F002E1ACC /* Anchovies.ai in Resources */,
+				EC7861FB191BF64F002E1ACC /* Toppings Template.psd in Resources */,
+				EC7861F0191BF64F002E1ACC /* Tomato.ai in Resources */,
 				EC83F2591896DFE900626A9B /* InfoPlist.strings in Resources */,
-				EC493FA218E9DDFF00EF8EE6 /* MainPizza.png in Resources */,
+				EC7861FD191BF64F002E1ACC /* roni.png in Resources */,
 				EC83F2621896DFE900626A9B /* Main.storyboard in Resources */,
-				EC493F9C18E9DDFF00EF8EE6 /* Anchovies.ai in Resources */,
-				EC493FA018E9DDFF00EF8EE6 /* Sasuage.ai in Resources */,
-				EC493FA718E9DDFF00EF8EE6 /* Chicken.psd in Resources */,
-				EC493F9F18E9DDFF00EF8EE6 /* Olives.ai in Resources */,
-				EC493FA818E9DDFF00EF8EE6 /* MainPizza.psd in Resources */,
-				EC493FA418E9DDFF00EF8EE6 /* Olives.png in Resources */,
+				EC7861FE191BF64F002E1ACC /* Sausage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +515,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -451,7 +527,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Peter Owens (528U7E4UHZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peter Owens (528U7E4UHZ)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -477,7 +554,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -490,7 +566,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Peter Owens (528U7E4UHZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peter Owens (528U7E4UHZ)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -511,10 +588,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RandomePizzaMarkII/RandomePizzaMarkII-Prefix.pch";
 				INFOPLIST_FILE = "RandomePizzaMarkII/RandomePizzaMarkII-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -524,10 +604,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RandomePizzaMarkII/RandomePizzaMarkII-Prefix.pch";
 				INFOPLIST_FILE = "RandomePizzaMarkII/RandomePizzaMarkII-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -535,7 +618,6 @@
 		EC83F2811896DFE900626A9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RandomePizzaMarkII.app/RandomePizzaMarkII";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -558,7 +640,6 @@
 		EC83F2821896DFE900626A9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RandomePizzaMarkII.app/RandomePizzaMarkII";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

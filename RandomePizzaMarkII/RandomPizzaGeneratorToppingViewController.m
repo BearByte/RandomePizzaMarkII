@@ -44,8 +44,10 @@
         cell.textLabel.enabled = YES;
     }
      */
-    NSLog(@"%lu",(unsigned long)[self.currentlySelectedToppings count]);
-  
+    self.currentlySelectedToppings = [[self makeIntoToppingDicionary:self.brain.toppings] mutableCopy];
+    self.brain.toppingsPool = self.currentlySelectedToppings;
+    [self.brain saveState]; 
+    [self.tableView reloadData]; 
 }
 
 -(NSMutableArray *)disabledVegan
@@ -234,13 +236,14 @@
 }
 
 
--(void)makeIntoDicionary
+-(NSDictionary *)makeIntoToppingDicionary:(NSArray *)array
 
 {
-    NSLog(@"Making dictionary...."); 
-    for (Topping *topping in self.brain.toppingsPool) {
-        [self.currentlySelectedToppings setObject:topping forKey:topping.name];
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc]init];
+    for (Topping *topping in array) {
+        [dictionary setObject:topping forKey:topping.name];
     }
+    return [dictionary copy];
 }
 
 

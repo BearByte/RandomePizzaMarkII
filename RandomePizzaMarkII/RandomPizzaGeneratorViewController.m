@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *pizzaView;
 
 @property (nonatomic, strong) NSArray *pizzaLayers; //A list of all the toppings subviews of the pizza pictures
+@property (weak, nonatomic) IBOutlet UIImageView *toppingView;
 @end
 
 @implementation RandomPizzaGeneratorViewController
@@ -123,7 +124,7 @@
     
     
 }
-
+//Displays the UITextView containing the topping name *note* does NOT set up the actual image
 -(void)displayToppings:(NSArray *)toppings
 {
     NSLog(@"called");
@@ -143,9 +144,14 @@
 //Give the pass the model to the table view controller so it can access the nesscessary data and refreash it based on the users desire
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    RandomPizzaGeneratorToppingViewController *destination = [segue destinationViewController];
-    destination.brain = self.brain;
+
+    UIViewController *destination = [segue destinationViewController];
     
+    
+    if ([destination isMemberOfClass:[RandomPizzaGeneratorToppingViewController class]])
+    {
+        [(RandomPizzaGeneratorToppingViewController *) destination setBrain:self.brain]; 
+    }
     
     
 }
@@ -172,6 +178,7 @@
     {
         self.vegitarianSwitch.enabled = YES;
     }
+    
     [self.brain updateForVeganChanged];
     [self sliderChanged:nil];
     [self.brain saveState];
@@ -199,9 +206,12 @@
         if (![topping.name isEqualToString:@"Cheese"])
         {
         
-            UIImageView *pizzaLayer = [[UIImageView alloc]initWithImage:[UIImage imageNamed:topping.image]];
+            UIImageView *pizzaLayer = [[UIImageView alloc]initWithFrame:[self.toppingView bounds]];
+            pizzaLayer.clipsToBounds = YES;
+            pizzaLayer.contentMode = UIViewContentModeScaleAspectFit;
+            pizzaLayer.image = [UIImage imageNamed:topping.image];
             [toppingViews addObject:pizzaLayer];
-            [self.pizzaView addSubview:pizzaLayer];
+            [self.toppingView addSubview:pizzaLayer];
         }
         
     }
@@ -210,7 +220,7 @@
 }
 -(void)resetPizzaPicture
 {
-    for (UIImageView *layer in self.pizzaLayers) {
+    for (UIImageView *layer in self.toppingView.subviews) {
         [layer removeFromSuperview];
     }
     

@@ -121,7 +121,7 @@
     
     
     
-    return @[cheese,chicken,olives,bacon,pineapple, sausage, jalapeno, anchovies, pepperoni, shrooms,arugula,canadianBacon];
+    return @[cheese,chicken,olives,bacon,pineapple, sausage, jalapeno, anchovies, pepperoni, shrooms,arugula,canadianBacon, eggPlant, burgers, onion, redPeppers, spinich];
 }
 -(void)saveState
 {
@@ -152,8 +152,11 @@
 -(void)removeVeganTopppings
 {
     NSMutableDictionary *mutableToppingsPool = [self.toppingsPool mutableCopy];
+    [self removeVegitarianToppings];
+    
     for (NSString *key in self.toppingsPool)
     {
+        
         if (![[self.toppingsPool objectForKey:key] vegan])
         {
             Topping *topping = [mutableToppingsPool objectForKey:key];
