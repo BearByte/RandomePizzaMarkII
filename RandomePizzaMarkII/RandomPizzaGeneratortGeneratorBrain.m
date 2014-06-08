@@ -12,12 +12,13 @@
 @property (nonatomic, strong) NSMutableArray *toppingPoolDictionary;
 @property (nonatomic, strong)NSMutableArray *removedVeganToppings;
 @property (nonatomic, strong) NSMutableArray *removedVegitarianToppings;
-
+@property (nonatomic, strong) NSDictionary *veganToppings;
+@property (nonatomic, strong) NSDictionary *vegitarianToppings;
 
 @end
 @implementation RandomPizzaGeneratortGeneratorBrain
 
-
+//Encoding shit for the User Defaults
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
     
@@ -42,7 +43,7 @@
     
 
 }
-//Lazy Instansations for the toppings variable
+//Lazy Instansatantiators:
 -(NSArray *)toppings
 {
     if (!_toppings)
@@ -78,6 +79,22 @@
     return _removedVegitarianToppings;
 }
 
+-(NSDictionary *)vegitarianToppings
+{
+    if (!_veganToppings) {
+        _vegitarianToppings = [self createVegitarianDictionary];
+    }
+    return _vegitarianToppings;
+}
+
+-(NSDictionary *)veganToppings
+{
+    if (!_veganToppings) {
+        _veganToppings = [self createVeganDictionary];
+    }
+    return _veganToppings; 
+}
+
 //The main generate loop. Returns an array of randomly chosen toppings. Take a desired number of toppings.
 -(NSArray *)generateWithNumberOfToppings:(int)number
 {
@@ -97,6 +114,7 @@
     return [chosen copy]; //return the chosen toppings as an NSArray (immuatable)
 }
 
+//Only needs to be run once ever. Creates all of the toppings Objects and puts them into an array.
 -(NSArray *)createInitalToppings
 {
     
@@ -121,8 +139,34 @@
     
     
     
-    return @[cheese,chicken,olives,bacon,pineapple, sausage, jalapeno, anchovies, pepperoni, shrooms,arugula,canadianBacon, eggPlant, burgers, onion, redPeppers, spinich];
+    return @[cheese,chicken,olives,bacon,pineapple, sausage, jalapeno, anchovies, pepperoni, shrooms,arugula,canadianBacon, eggPlant, onion, redPeppers, spinich];
 }
+
+
+-(NSDictionary *)createVeganDictionary
+{
+    NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
+    for (Topping *topping in self.toppings)
+    {
+        if ([topping vegan]) {
+            [temp setObject:topping forKey:topping.name];
+        }
+    }
+    return [temp copy];
+}
+
+
+-(NSDictionary *)createVegitarianDictionary
+{
+    NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
+    for (Topping *topping in self.toppings) {
+        if ([topping vegitarian]) {
+            [temp setObject:topping forKey:topping.name];
+        }
+    }
+    return [temp copy];
+}
+//Saves all the Data to NSUserdefaults
 -(void)saveState
 {
     NSData *model =[NSKeyedArchiver archivedDataWithRootObject:self];
@@ -130,6 +174,8 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+
+//Grabs data from NSUser defaults
 +(RandomPizzaGeneratortGeneratorBrain *)restoreState
 {
     NSData *modelData = [[NSUserDefaults standardUserDefaults] objectForKey:@"Model"];
@@ -137,6 +183,7 @@
     return model; 
 }
 
+//Makes the Topppings list into a dictionary.
 -(NSDictionary *)makeIntoDicionary
 
 
@@ -149,11 +196,14 @@
     return [temp copy];
     
 }
+
+///Remove all of the Vegan Toppings from the Toppings pool and store them in the appropriate dictionaries for when they have to be renabled
 -(void)removeVeganTopppings
 {
-    NSMutableDictionary *mutableToppingsPool = [self.toppingsPool mutableCopy];
+    NSLog(@"Removing Vegan");
     [self removeVegitarianToppings];
-    
+    NSMutableDictionary *mutableToppingsPool = [self.toppingsPool mutableCopy];
+    NSLog(@"At the begining the length of the toppings pool is: %lu",[self.toppingsPool count]);
     for (NSString *key in self.toppingsPool)
     {
         
@@ -170,32 +220,38 @@
             }
             
             [mutableToppingsPool removeObjectForKey:key];
-            [[self.toppingsPool objectForKey:key] setWasChecked:YES];
+            NSLog(@"Removed Something");
             
         
         }
     }
     self.toppingsPool = [mutableToppingsPool copy];
+    NSLog(@"After Removing Vegan:%lu", (unsigned long)self.toppingsPool.count);
     
 }
 
+//Remove the Vegitarian Toppings and Store them in a Array for when they have to be renabled
 -(void)removeVegitarianToppings
 {
-
+  
     NSMutableDictionary *mutableToppingsPool = [self.toppingsPool mutableCopy];
     for (NSString *key in self.toppingsPool) {
         if (![[self.toppingsPool objectForKey:key] vegitarian])
         {
             
             [mutableToppingsPool removeObjectForKey:key];
-            [[self.toppingsPool objectForKey:key] setWasChecked:YES];
             [self.removedVegitarianToppings addObject:[self.toppingsPool objectForKey:key]];
             
         }
     }
+    
+
     self.toppingsPool = [mutableToppingsPool copy];
+
 }
 
+
+//Add the array of disabled Vegan toppings back into the toppings pool
 -(void)enableVeganToppings
 
 {
@@ -209,6 +265,8 @@
     self.removedVeganToppings = [[NSMutableArray alloc]init];
 }
 
+
+//Add the array of disabled Vegitarian toppings back into the toppings pool
 -(void)enableVegitarianToppings
 {
     NSLog(@"ReEnabling Vegitarian toppings...");
@@ -226,10 +284,15 @@
     
 }
 
+//Called by the Controller when the Vegan switch is changed. Call the appropriate method to remove or add the vegan toppings as nessessary
+
 -(void)updateForVeganChanged
+
 {
+
     if (self.userVegan)
     {
+        NSLog(@"User is Vegan");
         [self removeVeganTopppings];
     }
     else
@@ -238,6 +301,7 @@
     }
         
 }
+//Called by the Controller when the Vegan switch is changed. Call the appropriate method to remove or add the vegan toppings as nessessary
 
 -(void)updateForVegChanged
 {
@@ -248,6 +312,24 @@
     else
     {
         [self enableVegitarianToppings]; 
+    }
+}
+
+//Selects all of the toppings valid to the vegitarian vegan settup
+-(void)selectAllToppings
+{
+    if (self.userVegan)
+    {
+        self.toppingsPool = self.veganToppings;
+        NSLog(@"All Vegan Toppings Should be Selected Now: %lu", [self.veganToppings count]);
+    }
+    else if (self.userVegitarian)
+    {
+        self.toppingsPool = self.vegitarianToppings;
+    }
+    else
+    {
+        self.toppingsPool = [self makeIntoDicionary];
     }
 }
 

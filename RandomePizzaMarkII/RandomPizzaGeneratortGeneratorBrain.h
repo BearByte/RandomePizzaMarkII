@@ -22,7 +22,7 @@
 -(void)saveState;
 -(void)updateForVegChanged;
 -(void)updateForVeganChanged;
-
+-(void)selectAllToppings;
 
 +(RandomPizzaGeneratortGeneratorBrain *)restoreState;
 

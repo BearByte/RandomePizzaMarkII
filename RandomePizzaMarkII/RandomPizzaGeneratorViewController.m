@@ -223,6 +223,10 @@
     for (UIImageView *layer in self.toppingView.subviews) {
         [layer removeFromSuperview];
     }
+    for (UIImageView *otherLayer in self.pizzaView.subviews)
+    {
+        [otherLayer removeFromSuperview]; 
+    }
     
 }
 - (IBAction)testMethod

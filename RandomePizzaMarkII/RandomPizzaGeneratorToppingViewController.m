@@ -32,6 +32,8 @@
     
     
 }
+
+
 - (IBAction)testButtonPressed:(id)sender
 {
     /*
@@ -44,12 +46,14 @@
         cell.textLabel.enabled = YES;
     }
      */
-    self.currentlySelectedToppings = [[self makeIntoToppingDicionary:self.brain.toppings] mutableCopy];
-    self.brain.toppingsPool = self.currentlySelectedToppings;
-    [self.brain saveState]; 
+    [self.brain selectAllToppings];
+    self.currentlySelectedToppings = [self.brain.toppingsPool mutableCopy];
+    [self.brain saveState];
     [self.tableView reloadData]; 
 }
 
+
+//Lazy Instantiators
 -(NSMutableArray *)disabledVegan
 {
     if (!_disabledVegan)
@@ -157,6 +161,7 @@
     return cell;
 }
 
+//Save the brian and copy it to the Main screen view controller
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -169,11 +174,14 @@
     
 }
 
+
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if ([[tableView cellForRowAtIndexPath:indexPath ] accessoryType] == UITableViewCellAccessoryCheckmark)
+    if ([[tableView cellForRowAtIndexPath:indexPath ] accessoryType] == UITableViewCellAccessoryCheckmark) //if the cell is selected
     {
+        //uncheck an remove from toppings pool
         
         [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryNone];
         RandomPizzaGeneratorCell *toppingCell = (RandomPizzaGeneratorCell *)[tableView cellForRowAtIndexPath:indexPath];
